@@ -1,0 +1,47 @@
+{
+  "name": "thoughts2bits",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gulp compile:css",
+    "serve:watch": "gulp",
+    "start": "npm run serve:watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Potcharapol Suteparuk <psuteparuk@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@material/animation": "^0.1.1",
+    "@material/button": "^0.1.1",
+    "@material/card": "^0.1.1",
+    "@material/checkbox": "^0.1.1",
+    "@material/drawer": "^0.1.1",
+    "@material/elevation": "^0.1.1",
+    "@material/fab": "^0.2.0",
+    "@material/form-field": "^0.1.0",
+    "@material/icon-toggle": "^0.1.1",
+    "@material/list": "^0.1.0",
+    "@material/menu": "^0.1.1",
+    "@material/radio": "^0.1.1",
+    "@material/ripple": "^0.1.1",
+    "@material/select": "^0.1.1",
+    "@material/snackbar": "^0.1.1",
+    "@material/textfield": "^0.1.1",
+    "@material/theme": "^0.1.0",
+    "@material/typography": "^0.1.0",
+    "bootstrap": "^4.0.0-alpha.6",
+    "material-components-web": "^0.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-watch": "^4.3.11",
+    "path": "^0.12.7",
+    "require-dir": "^0.3.1",
+    "rimraf": "^2.5.4"
+  }
+}

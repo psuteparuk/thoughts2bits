@@ -1,0 +1,22 @@
+<meta name="robots" content="all">
+<meta name="author" content="{{ default .Site.Params.author .Params.author }}">
+<meta name="copyright" content="{{ .Site.Copyright }}">
+<meta name="description" content="{{ default .Site.Params.description .Description }}">
+{{ with .Keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+
+{{ if .IsHome }}
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:type" content="website">
+{{ else }}
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+<meta property="og:type" content="article">
+{{ end }}
+
+<meta property="og:site_name" content="Thoughts2Bits">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ default .Site.Params.logo .Params.Image }}">
+<meta property="og:description" content="{{ default .Site.Params.description .Description }}">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">

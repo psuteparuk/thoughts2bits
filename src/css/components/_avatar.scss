@@ -1,0 +1,36 @@
+.t2b-avatar-container {
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  // force composite rendering
+  transform: translateZ(0);
+}
+
+.t2b-avatar-small {
+  width: 30px;
+  height: 30px;
+}
+
+.t2b-avatar-medium {
+  width: 100px;
+  height: 100px;
+}
+
+.t2b-avatar-large {
+  width: 175px;
+  height: 175px;
+}
+
+.t2b-avatar-cell {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.t2b-avatar-default {
+  background-image: url('../images/logo.jpg');
+}
