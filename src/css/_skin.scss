@@ -6,18 +6,26 @@
   border: none;
 }
 
-.text-center {
-  text-align: center;
+.line-height-base {
+  line-height: $line-height-base;
 }
 
-.text-capitalize {
-  text-transform: capitalize;
+.radius-none {
+  border-radius: 0;
 }
 
-.text-lowercase {
-  text-transform: lowercase;
+.radius-sm {
+  border-radius: $border-radius-sm;
 }
 
-.text-uppercase {
-  text-transform: uppercase;
+.radius-md {
+  border-radius: $border-radius;
+}
+
+.radius-lg {
+  border-radius: $border-radius-lg;
+}
+
+.radius-round {
+  border-radius: 50%;
 }

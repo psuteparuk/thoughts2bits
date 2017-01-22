@@ -1,5 +1,21 @@
-$mdc-theme-primary: #009688;
-$mdc-theme-accent: #FFA726;
-$mdc-theme-background: #FAFAFA;
+$font-family-sans-serif: "Open Sans", Arial, sans-serif;
+$headings-font-weight: 500;
+
+// colors
+$color-fruit-salad: #4CAF50;
+$color-sunshade: #FFA726;
+$color-alabaster: #FAFAFA;
+
+$brand-primary: $color-fruit-salad;
+$brand-accent: $color-sunshade;
+$body-bg: $color-alabaster;
+
+$mdc-theme-primary: $color-fruit-salad;
+$mdc-theme-accent: $color-sunshade;
+$mdc-theme-background: $color-alabaster;
+
+$duration-base: .2s;
+$duration-fast: .15s;
+$duration-slow: .25s;
 
 $golden-ratio: 1.618;

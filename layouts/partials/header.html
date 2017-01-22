@@ -1,31 +1,28 @@
-<div class="t2b-appbar mdc-theme--primary-bg mdc-theme--text-primary-on-primary mdc-elevation--z4">
-  <div class="full-width gutter-padding-horizontal">
-    <button class="material-icons mdc-theme--text-primary-on-primary background-none border-none pull-left">menu</button>
-    <div class="t2b-logo-container mdc-typography--title">
-      <div class="t2b-logo-row">
-        <div class="t2b-logo-cell">
-          <div class="t2b-avatar-container t2b-avatar-small">
-            <img
-              alt="avatar"
-              src="images/transparent.png"
-              class="t2b-avatar-cell t2b-avatar-default"
-            />
-          </div>
-        </div>
-        <div class="t2b-logo-cell gutter-padding-horizontal text-uppercase">
+{{ $baseURL := .Site.BaseURL }}
+{{ $currentSection := .Section }}
+
+<div class="t2b-appbar t2b-appbar-height mdc-theme--primary mdc-theme--background mdc-elevation--z4">
+  <div class="full-width full-padding-horizontal">
+    <div class="t2b-navbar-container">
+      <div class="t2b-navbar-row">
+        <div class="t2b-navbar-cell t2b-navbar-cell-logo text-uppercase">
           <span>Thoughts2Bits</span>
+        </div>
+
+        <div class="t2b-navbar-cell t2b-navbar-cell-links full-width">
+          {{ range $section, $pages := .Site.Sections }}
+            {{ if ne $section "" }}
+              <a
+                class="mdc-button mdc-button--compact {{ if eq $section $currentSection }}active{{ end }}"
+                href="{{ $baseURL }}{{ $section }}">
+                {{ $section }}
+              </a>
+            {{ end }}
+          {{ end }}
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<aside class="mdc-temporary-drawer">
-  <nav class="mdc-temporary-drawer__drawer">
-    <header class="mdc-temporary-drawer__header">
-      <div class="mdc-temporary-drawer__header-content mdc-theme--primary-bg mdc-theme--text primary-on-primary">
-        LOGO
-      </div>
-    </header>
-  </nav>
-</aside>
+<div class="t2b-appbar-height"></div>

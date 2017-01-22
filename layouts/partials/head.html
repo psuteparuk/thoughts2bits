@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="mdc-typography" {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }}>
+<html {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }}>
   <head>
     {{ partial "meta.html" . }}
 
@@ -8,8 +8,7 @@
 
     <link rel="shortcut icon" href="images/logo.jpg">
     <link rel="canonical" href="{{ .Permalink }}">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     {{ if .RSSLink }}<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />{{ end }}

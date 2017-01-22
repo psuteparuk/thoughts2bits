@@ -1,0 +1,41 @@
+.t2b-navbar-container {
+  display: block;
+
+  @include media-breakpoint-up(md) {
+    display: table;
+    table-layout: fixed;
+  }
+}
+
+.t2b-navbar-row {
+  display: block;
+
+  @include media-breakpoint-up(md) {
+    display: table-row;
+  }
+}
+
+.t2b-navbar-cell {
+  display: block;
+
+  @include media-breakpoint-up(md) {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.t2b-navbar-cell-logo {
+  text-align: center;
+}
+
+.t2b-navbar-cell-links {
+  text-align: center;
+
+  & .active {
+    border-bottom: .125rem solid $mdc-theme-primary;
+  }
+
+  @include media-breakpoint-up(md) {
+    text-align: right;
+  }
+}

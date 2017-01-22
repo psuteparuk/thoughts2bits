@@ -1,0 +1,13 @@
+.t2b-card {
+  transition: all $mdc-animation-fast-out-slow-in-timing-function $duration-base;
+
+  &:hover {
+    @include mdc-elevation(8);
+  }
+}
+
+.t2b-card-action {
+  &:first-child {
+    margin-left: auto;
+  }
+}

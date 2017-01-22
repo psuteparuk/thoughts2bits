@@ -29,6 +29,11 @@
   padding-right: $grid-gutter-width-base;
 }
 
+.full-padding-vertical {
+  padding-top: $grid-gutter-width-base;
+  padding-bottom: $grid-gutter-width-base;
+}
+
 .padding-golden-ratio {
   padding: 50%/$golden-ratio 0;
 }
