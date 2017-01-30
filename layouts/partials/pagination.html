@@ -1,0 +1,13 @@
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+<div class="gutter-padding-vertical clearfix">
+  {{ if .Paginator.HasPrev }}
+  <a class="text-lg pull-left" href="{{ .URL }}page/{{ .Pagination.Prev.PageNumber }}" rel="prev">&larr; PREV</a>
+  {{ end }}
+
+  <span class="full-width text-center">{{ .Paginator.PageNumber }}/{{ .Paginator.TotalPages }}</span>
+
+  {{ if .Paginator.HasNext }}
+  <a class="text-lg pull-right" href="{{ .URL }}page/{{ .Pagination.Next.PageNumber }}" rel="next">NEXT &rarr;</a>
+  {{ end }}
+</div>
+{{ end }}

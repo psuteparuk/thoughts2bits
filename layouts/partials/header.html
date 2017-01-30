@@ -1,19 +1,22 @@
 {{ $baseURL := .Site.BaseURL }}
 {{ $currentSection := .Section }}
+{{ $kind := .Kind }}
+{{ $title := .Title }}
 
 <div class="t2b-appbar t2b-appbar-height mdc-theme--primary mdc-theme--background mdc-elevation--z4">
   <div class="full-width full-padding-horizontal">
     <div class="t2b-navbar-container">
       <div class="t2b-navbar-row">
         <div class="t2b-navbar-cell t2b-navbar-cell-logo text-uppercase">
-          <span>Thoughts2Bits</span>
+          <a href="{{ $baseURL }}">Thoughts2Bits</a>
         </div>
 
         <div class="t2b-navbar-cell t2b-navbar-cell-links full-width">
           {{ range $section, $pages := .Site.Sections }}
             {{ if ne $section "" }}
+              {{ $isActive := or (eq $section $currentSection) (and (eq $kind "section") (lower $title | eq $section)) }}
               <a
-                class="mdc-button mdc-button--compact {{ if eq $section $currentSection }}active{{ end }}"
+                class="mdc-button mdc-button--compact {{ if $isActive }}active{{ end }}"
                 href="{{ $baseURL }}{{ $section }}">
                 {{ $section }}
               </a>

@@ -1,9 +1,19 @@
 .t2b-card {
+  border-radius: $border-radius-lg;
   transition: all $mdc-animation-fast-out-slow-in-timing-function $duration-base;
+  @include mdc-elevation(8);
 
   &:hover {
-    @include mdc-elevation(8);
+    @include mdc-elevation(2);
   }
+}
+
+.t2b-card-primary {
+  border-top: $border-radius-lg solid $mdc-theme-primary;
+}
+
+.t2b-card-accent {
+  border-top: $border-radius-lg solid $mdc-theme-accent;
 }
 
 .t2b-card-action {

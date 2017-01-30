@@ -1,0 +1,26 @@
+{{ partial "head.html" . }}
+
+{{ partial "header.html" . }}
+
+<div class="container full-padding-vertical">
+  <div class="t2b-display text-center">
+    <span>{{ .Title }}</span>
+  </div>
+
+  <article class="gutter-padding-vertical text-lg line-height-base">
+    {{ .Content }}
+  </article>
+
+  <aside>
+    <div class="full-width gutter-padding clearfix">
+      {{ if .PrevInSection }}
+      <a class="text-lg pull-left" href="{{ .PrevInSection.Permalink }}" rel="prev">&larr; PREV: {{ .PrevInSection.Title }}</a>
+      {{ end }}
+      {{ if .NextInSection }}
+      <a class="text-lg pull-right" href="{{ .NextInSection.Permalink }}" rev="next">NEXT: {{ .NextInSection.Title }} &rarr;</a>
+      {{ end }}
+    </div>
+  </aside>
+</div>
+
+{{ partial "foot.html" . }}

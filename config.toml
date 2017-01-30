@@ -8,3 +8,7 @@ keywords = "Blog, Engineering, Thoughts, Bits, Thoughts2Bits"
 [params]
   author = "Potcharapol Suteparuk"
   description = "Engineering Blog"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"

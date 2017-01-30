@@ -2,12 +2,32 @@
   background: none;
 }
 
+.bg-gray-dark {
+  background-color: $gray-dark;
+}
+
+.bg-gray {
+  background-color: $gray;
+}
+
 .border-none {
   border: none;
 }
 
 .line-height-base {
   line-height: $line-height-base;
+}
+
+.text-lg {
+  font-size: $font-size-lg;
+}
+
+.text-sm {
+  font-size: $font-size-sm;
+}
+
+.text-xs {
+  font-size: $font-size-xs;
 }
 
 .radius-none {
@@ -28,4 +48,8 @@
 
 .radius-round {
   border-radius: 50%;
+}
+
+.divider-horizontal + .divider-horizontal {
+  border-top: 1px solid $gray-light;
 }

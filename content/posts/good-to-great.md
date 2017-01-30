@@ -1,6 +1,8 @@
 +++
 date = "2017-01-22T04:09:59+07:00"
 title = "Good to Great"
+categories = ["Development", "Review"]
+tags = ["Development", "Review"]
 draft = true
 
 +++

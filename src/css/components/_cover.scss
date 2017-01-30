@@ -18,6 +18,7 @@
 
 .t2b-cover-overlay {
   @include mdc-theme-prop(background-color, background);
+  // background-color: $gray-lighter;
 
   position: absolute;
   top: 0;

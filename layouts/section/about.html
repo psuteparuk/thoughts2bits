@@ -1,0 +1,32 @@
+{{ partial "head.html" . }}
+
+{{ partial "header.html" . }}
+
+<div class="container full-padding-vertical">
+  <div class="t2b-display text-center">
+    <span>{{ .Title }}</span>
+  </div>
+
+  <article class="gutter-padding-vertical text-lg line-height-base">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="t2b-avatar-container t2b-avatar-large center-block">
+          <img
+            src="{{ .Site.BaseURL}}/images/transparent.png"
+            alt="avatar"
+            class="t2b-avatar-cell t2b-avatar-default">
+          <img
+            src="{{ .Site.BaseURL}}/{{ .Params.mainimage }}"
+            alt="avatar"
+            class="t2b-avatar-cell"
+            style="background-image: url('../images/avatar-potchy.jpg');">
+        </div>
+      </div>
+      <div class="col-md-8 gutter-padding-vertical">
+        {{ .Content }}
+      </div>
+    </div>
+  </article>
+</div>
+
+{{ partial "foot.html" . }}

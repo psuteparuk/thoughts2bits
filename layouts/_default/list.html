@@ -1,0 +1,27 @@
+{{ partial "head.html" . }}
+
+{{ partial "header.html" . }}
+
+<div class="container full-padding-vertical">
+  <div class="t2b-display text-center">
+    {{ if isset .Data "Singular" }}
+    <span>{{ .Data.Singular }}:</span>
+    {{ end }}
+    <span>{{ .Title }}</span>
+  </div>
+
+  <div class="row gutter-padding-vertical">
+    {{ range (.Data.Pages.GroupByDate "2006") }}
+      <div class="col-lg-8 offset-lg-2 divider-horizontal">
+        <h3>{{ .Key }}</h3>
+        <ul class="mdc-list">
+        {{ range .Pages }}
+          <li class="mdc-list-item">{{ .Render "li" }}</li>
+        {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+{{ partial "foot.html" . }}

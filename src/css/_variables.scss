@@ -1,17 +1,39 @@
 $font-family-sans-serif: "Open Sans", Arial, sans-serif;
+$font-weight-normal: 300;
+$font-weight-bold: 500;
 $headings-font-weight: 500;
 
 // colors
-$color-fruit-salad: #4CAF50;
-$color-sunshade: #FFA726;
+$color-gold-drop: #F57C00;
+$color-orange-peel: #FF9800;
+$color-frangipani: #FFE0B2;
+$color-cerulean: #03A9F4;
+$color-mine-shaft: #212121;
+$color-boulder: #757575;
+$color-silver: #BDBDBD;
+$color-gallery: #EEEEEE;
 $color-alabaster: #FAFAFA;
 
-$brand-primary: $color-fruit-salad;
-$brand-accent: $color-sunshade;
+// $color-fruit-salad: #4CAF50;
+// $color-sunshade: #FFA726;
+
+$brand-primary: $color-orange-peel;
+$brand-accent: $color-cerulean;
 $body-bg: $color-alabaster;
 
-$mdc-theme-primary: $color-fruit-salad;
-$mdc-theme-accent: $color-sunshade;
+$brand-primary-dark: $color-gold-drop;
+$brand-primary-light: $color-frangipani;
+
+$gray-dark: $color-mine-shaft;
+$gray: $color-boulder;
+$gray-light: $color-silver;
+$gray-lighter: $color-gallery;
+$gray-lightest: $color-alabaster;
+
+$link-hover-color: $brand-primary-dark;
+
+$mdc-theme-primary: $color-orange-peel;
+$mdc-theme-accent: $color-cerulean;
 $mdc-theme-background: $color-alabaster;
 
 $duration-base: .2s;
