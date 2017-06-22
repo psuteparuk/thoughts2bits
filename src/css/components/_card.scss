@@ -1,10 +1,9 @@
 .t2b-card {
   border-radius: $border-radius-lg;
   transition: all $mdc-animation-fast-out-slow-in-timing-function $duration-base;
-  @include mdc-elevation(8);
 
   &:hover {
-    @include mdc-elevation(2);
+    @include mdc-elevation(8);
   }
 }
 

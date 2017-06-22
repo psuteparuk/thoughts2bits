@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "Thoughts2Bits"
-baseurl = "http://thoughts2bits.com/"
+baseURL = "http://thoughts2bits.com/"
 canonifyURLs = true
 copyright = "Copyright &copy; 2017 Thoughts2Bits"
 keywords = "Blog, Engineering, Thoughts, Bits, Thoughts2Bits"
@@ -11,4 +11,5 @@ keywords = "Blog, Engineering, Thoughts, Bits, Thoughts2Bits"
 
 [taxonomies]
   category = "categories"
+  series = "series"
   tag = "tags"

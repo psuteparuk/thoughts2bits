@@ -307,7 +307,7 @@ ul ol {
 }
 
 dt {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 dd {
@@ -320,12 +320,12 @@ blockquote {
 }
 
 a {
-  color: #FF9800;
+  color: #F44336;
   text-decoration: none;
 }
 
 a:focus, a:hover {
-  color: #F57C00;
+  color: #D32F2F;
   text-decoration: underline;
 }
 
@@ -481,11 +481,11 @@ output {
 }
 
 .bg-primary {
-  background-color: #FF9800 !important;
+  background-color: #F44336 !important;
 }
 
 a.bg-primary:focus, a.bg-primary:hover {
-  background-color: #cc7a00 !important;
+  background-color: #ea1c0d !important;
 }
 
 .bg-success {
@@ -3377,7 +3377,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 }
 
 .font-weight-bold {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .font-italic {
@@ -3397,11 +3397,11 @@ a.text-muted:focus, a.text-muted:hover {
 }
 
 .text-primary {
-  color: #FF9800 !important;
+  color: #F44336 !important;
 }
 
 a.text-primary:focus, a.text-primary:hover {
-  color: #cc7a00 !important;
+  color: #ea1c0d !important;
 }
 
 .text-success {
@@ -4796,8 +4796,8 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit;
 }
@@ -5214,8 +5214,6 @@ mark,
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -5228,7 +5226,6 @@ mark,
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -5239,8 +5236,6 @@ mark,
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -5280,7 +5275,6 @@ mark,
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -5425,8 +5419,8 @@ mark,
 
 .mdc-button--theme-dark .mdc-button--raised,
 .mdc-theme--dark .mdc-button--raised {
-  background-color: #FF9800;
-  background-color: var(--mdc-theme-primary, #FF9800);
+  background-color: #F44336;
+  background-color: var(--mdc-theme-primary, #F44336);
   /* postcss-bem-linter: ignore */
 }
 
@@ -5443,22 +5437,22 @@ mark,
 }
 
 .mdc-button--primary {
-  color: #FF9800;
-  color: var(--mdc-theme-primary, #FF9800);
+  color: #F44336;
+  color: var(--mdc-theme-primary, #F44336);
   /* postcss-bem-linter: ignore */
 }
 
 .mdc-button--theme-dark .mdc-button--primary,
 .mdc-theme--dark .mdc-button--primary {
-  color: #FF9800;
-  color: var(--mdc-theme-primary, #FF9800);
+  color: #F44336;
+  color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-button--primary.mdc-button--raised {
-  background-color: #FF9800;
-  background-color: var(--mdc-theme-primary, #FF9800);
-  color: rgba(0, 0, 0, 0.87);
-  color: var(--mdc-theme-text-primary-on-primary, rgba(0, 0, 0, 0.87));
+  background-color: #F44336;
+  background-color: var(--mdc-theme-primary, #F44336);
+  color: white;
+  color: var(--mdc-theme-text-primary-on-primary, white);
   /* postcss-bem-linter: ignore */
 }
 
@@ -5467,20 +5461,20 @@ mark,
 }
 
 .mdc-button--accent {
-  color: #03A9F4;
-  color: var(--mdc-theme-accent, #03A9F4);
+  color: #FF9800;
+  color: var(--mdc-theme-accent, #FF9800);
   /* postcss-bem-linter: ignore */
 }
 
 .mdc-button--theme-dark .mdc-button--accent,
 .mdc-theme--dark .mdc-button--accent {
-  color: #03A9F4;
-  color: var(--mdc-theme-accent, #03A9F4);
+  color: #FF9800;
+  color: var(--mdc-theme-accent, #FF9800);
 }
 
 .mdc-button--accent.mdc-button--raised {
-  background-color: #03A9F4;
-  background-color: var(--mdc-theme-accent, #03A9F4);
+  background-color: #FF9800;
+  background-color: var(--mdc-theme-accent, #FF9800);
   color: rgba(0, 0, 0, 0.87);
   color: var(--mdc-theme-text-primary-on-accent, rgba(0, 0, 0, 0.87));
   /* postcss-bem-linter: ignore */
@@ -5683,8 +5677,6 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -5697,7 +5689,6 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -5708,8 +5699,6 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -5749,7 +5738,6 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -6185,8 +6173,6 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -6199,7 +6185,6 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -6210,8 +6195,6 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -6251,7 +6234,6 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -6274,10 +6256,10 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
     background-color: transparent;
   }
   50% {
-    border-color: #FF9800;
-    border-color: var(--mdc-theme-primary, #FF9800);
-    background-color: #FF9800;
-    background-color: var(--mdc-theme-primary, #FF9800);
+    border-color: #F44336;
+    border-color: var(--mdc-theme-primary, #F44336);
+    background-color: #F44336;
+    background-color: var(--mdc-theme-primary, #F44336);
   }
 }
 @keyframes mdc-checkbox-fade-in-background {
@@ -6286,20 +6268,20 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
     background-color: transparent;
   }
   50% {
-    border-color: #FF9800;
-    border-color: var(--mdc-theme-primary, #FF9800);
-    background-color: #FF9800;
-    background-color: var(--mdc-theme-primary, #FF9800);
+    border-color: #F44336;
+    border-color: var(--mdc-theme-primary, #F44336);
+    background-color: #F44336;
+    background-color: var(--mdc-theme-primary, #F44336);
   }
 }
 
 @-webkit-keyframes mdc-checkbox-fade-out-background {
   0%,
   80% {
-    border-color: #FF9800;
-    border-color: var(--mdc-theme-primary, #FF9800);
-    background-color: #FF9800;
-    background-color: var(--mdc-theme-primary, #FF9800);
+    border-color: #F44336;
+    border-color: var(--mdc-theme-primary, #F44336);
+    background-color: #F44336;
+    background-color: var(--mdc-theme-primary, #F44336);
   }
   100% {
     border-color: rgba(0, 0, 0, 0.54);
@@ -6310,10 +6292,10 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
 @keyframes mdc-checkbox-fade-out-background {
   0%,
   80% {
-    border-color: #FF9800;
-    border-color: var(--mdc-theme-primary, #FF9800);
-    background-color: #FF9800;
-    background-color: var(--mdc-theme-primary, #FF9800);
+    border-color: #F44336;
+    border-color: var(--mdc-theme-primary, #F44336);
+    background-color: #F44336;
+    background-color: var(--mdc-theme-primary, #F44336);
   }
   100% {
     border-color: rgba(0, 0, 0, 0.54);
@@ -6327,10 +6309,10 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
     background-color: transparent;
   }
   50% {
-    border-color: #FF9800;
-    border-color: var(--mdc-theme-primary, #FF9800);
-    background-color: #FF9800;
-    background-color: var(--mdc-theme-primary, #FF9800);
+    border-color: #F44336;
+    border-color: var(--mdc-theme-primary, #F44336);
+    background-color: #F44336;
+    background-color: var(--mdc-theme-primary, #F44336);
   }
 }
 
@@ -6340,20 +6322,20 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
     background-color: transparent;
   }
   50% {
-    border-color: #FF9800;
-    border-color: var(--mdc-theme-primary, #FF9800);
-    background-color: #FF9800;
-    background-color: var(--mdc-theme-primary, #FF9800);
+    border-color: #F44336;
+    border-color: var(--mdc-theme-primary, #F44336);
+    background-color: #F44336;
+    background-color: var(--mdc-theme-primary, #F44336);
   }
 }
 
 @-webkit-keyframes mdc-checkbox-fade-out-background-dark {
   0%,
   80% {
-    border-color: #FF9800;
-    border-color: var(--mdc-theme-primary, #FF9800);
-    background-color: #FF9800;
-    background-color: var(--mdc-theme-primary, #FF9800);
+    border-color: #F44336;
+    border-color: var(--mdc-theme-primary, #F44336);
+    background-color: #F44336;
+    background-color: var(--mdc-theme-primary, #F44336);
   }
   100% {
     border-color: white;
@@ -6364,10 +6346,10 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
 @keyframes mdc-checkbox-fade-out-background-dark {
   0%,
   80% {
-    border-color: #FF9800;
-    border-color: var(--mdc-theme-primary, #FF9800);
-    background-color: #FF9800;
-    background-color: var(--mdc-theme-primary, #FF9800);
+    border-color: #F44336;
+    border-color: var(--mdc-theme-primary, #F44336);
+    background-color: #F44336;
+    background-color: var(--mdc-theme-primary, #F44336);
   }
   100% {
     border-color: white;
@@ -6673,8 +6655,8 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
   opacity: 0;
   pointer-events: none;
   will-change: opacity, transform;
-  background: #FF9800;
-  background: var(--mdc-theme-primary, #FF9800);
+  background: #F44336;
+  background: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-checkbox__native-control {
@@ -6737,10 +6719,10 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
 .mdc-checkbox__native-control:checked ~ .mdc-checkbox__background {
   -webkit-transition: border-color 90ms 0ms cubic-bezier(0, 0, 0.2, 1), background-color 90ms 0ms cubic-bezier(0, 0, 0.2, 1);
   transition: border-color 90ms 0ms cubic-bezier(0, 0, 0.2, 1), background-color 90ms 0ms cubic-bezier(0, 0, 0.2, 1);
-  border-color: #FF9800;
-  border-color: var(--mdc-theme-primary, #FF9800);
-  background-color: #FF9800;
-  background-color: var(--mdc-theme-primary, #FF9800);
+  border-color: #F44336;
+  border-color: var(--mdc-theme-primary, #F44336);
+  background-color: #F44336;
+  background-color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-checkbox__native-control:checked ~ .mdc-checkbox__background .mdc-checkbox__checkmark {
@@ -6761,10 +6743,10 @@ fieldset:disabled .mdc-button--raised, .mdc-button--raised:disabled {
 }
 
 .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__background {
-  border-color: #FF9800;
-  border-color: var(--mdc-theme-primary, #FF9800);
-  background-color: #FF9800;
-  background-color: var(--mdc-theme-primary, #FF9800);
+  border-color: #F44336;
+  border-color: var(--mdc-theme-primary, #F44336);
+  background-color: #F44336;
+  background-color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__background .mdc-checkbox__checkmark {
@@ -7189,8 +7171,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -7203,7 +7183,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -7214,8 +7193,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -7255,7 +7232,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -7388,8 +7364,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -7402,7 +7376,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -7413,8 +7386,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -7454,7 +7425,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -7487,9 +7457,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
  */
 /* TODO(sgomes): Figure out what to do about desktop font sizes. */
 /* TODO(sgomes): Figure out what to do about i18n and i18n font sizes. */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
-/* stylelint-enable scss/dollar-variable-pattern */
 .mdc-permanent-drawer {
   /* Use aspect ratio trick to maintain 16:9 aspect ratio on the header */
   /* stylelint-disable selector-no-qualifying-type */
@@ -7610,8 +7577,8 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
 
 .mdc-permanent-drawer--selected.mdc-list-item,
 .mdc-permanent-drawer--selected.mdc-list-item .mdc-list-item__start-detail {
-  color: #FF9800;
-  color: var(--mdc-theme-primary, #FF9800);
+  color: #F44336;
+  color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-permanent-drawer .mdc-list-item::before {
@@ -8073,8 +8040,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -8087,7 +8052,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -8098,8 +8062,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -8139,7 +8101,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -8272,8 +8233,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -8286,7 +8245,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -8297,8 +8255,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -8338,7 +8294,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -8371,9 +8326,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
  */
 /* TODO(sgomes): Figure out what to do about desktop font sizes. */
 /* TODO(sgomes): Figure out what to do about i18n and i18n font sizes. */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
-/* stylelint-enable scss/dollar-variable-pattern */
 .mdc-temporary-drawer {
   /* Use aspect ratio trick to maintain 16:9 aspect ratio on the header */
   /* stylelint-disable selector-no-qualifying-type */
@@ -8481,8 +8433,8 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
 
 .mdc-temporary-drawer--selected.mdc-list-item,
 .mdc-temporary-drawer--selected.mdc-list-item .mdc-list-item__start-detail {
-  color: #FF9800;
-  color: var(--mdc-theme-primary, #FF9800);
+  color: #F44336;
+  color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-temporary-drawer .mdc-list-item::before {
@@ -9054,8 +9006,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -9068,7 +9018,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -9079,8 +9028,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -9120,7 +9067,6 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /* postcss-bem-linter: define fab */
 .mdc-fab {
   display: -webkit-inline-box;
@@ -9147,8 +9093,8 @@ fieldset:disabled .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__b
   -moz-appearance: none;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
-  background-color: #03A9F4;
-  background-color: var(--mdc-theme-accent, #03A9F4);
+  background-color: #FF9800;
+  background-color: var(--mdc-theme-accent, #FF9800);
   color: rgba(0, 0, 0, 0.87);
   color: var(--mdc-theme-text-primary-on-accent, rgba(0, 0, 0, 0.87));
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
@@ -9497,8 +9443,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -9511,7 +9455,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -9522,8 +9465,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -9563,7 +9504,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -9767,8 +9707,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -9781,7 +9719,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -9997,8 +9934,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -10011,7 +9946,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -10022,8 +9956,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -10063,7 +9995,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 .mdc-icon-toggle {
   color: rgba(0, 0, 0, 0.54);
   color: var(--mdc-theme-text-secondary-on-light, rgba(0, 0, 0, 0.54));
@@ -10131,13 +10062,13 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 }
 
 .mdc-icon-toggle--primary {
-  color: #FF9800;
-  color: var(--mdc-theme-primary, #FF9800);
+  color: #F44336;
+  color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-icon-toggle--accent {
-  color: #03A9F4;
-  color: var(--mdc-theme-accent, #03A9F4);
+  color: #FF9800;
+  color: var(--mdc-theme-accent, #FF9800);
 }
 
 .mdc-icon-toggle--primary:focus::after,
@@ -10172,21 +10103,14 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
   --mdc-ripple-fg-approx-xf: 0;
   will-change: transition, opacity;
   -webkit-tap-highlight-color: transparent;
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
   will-change: initial;
 }
 
 .mdc-icon-toggle.mdc-ripple-upgraded::before {
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   background-color: rgba(0, 0, 0, 0.062);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
@@ -10228,7 +10152,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 }
 
 .mdc-icon-toggle.mdc-ripple-upgraded::after {
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   background-color: rgba(0, 0, 0, 0.062);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
@@ -10283,21 +10206,14 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
 .mdc-icon-toggle--theme-dark.mdc-icon-toggle.mdc-ripple-upgraded,
 .mdc-theme--dark .mdc-icon-toggle.mdc-ripple-upgraded {
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
 }
 
 .mdc-icon-toggle--theme-dark.mdc-icon-toggle.mdc-ripple-upgraded::before,
 .mdc-theme--dark .mdc-icon-toggle.mdc-ripple-upgraded::before {
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   background-color: rgba(255, 255, 255, 0.16);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
@@ -10344,7 +10260,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
 .mdc-icon-toggle--theme-dark.mdc-icon-toggle.mdc-ripple-upgraded::after,
 .mdc-theme--dark .mdc-icon-toggle.mdc-ripple-upgraded::after {
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   background-color: rgba(255, 255, 255, 0.16);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
@@ -10403,23 +10318,15 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 }
 
 .mdc-icon-toggle--primary.mdc-ripple-upgraded {
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
 }
 
 .mdc-icon-toggle--primary.mdc-ripple-upgraded::before {
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  background-color: rgba(255, 152, 0, 0.14);
+  background-color: rgba(244, 67, 54, 0.14);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
   position: absolute;
   top: calc(50% - 100%);
@@ -10438,7 +10345,7 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
 @supports (background-color: color(green a(10%))) {
   .mdc-icon-toggle--primary.mdc-ripple-upgraded::before {
-    background-color: color(var(--mdc-theme-primary, #FF9800) a(14%));
+    background-color: color(var(--mdc-theme-primary, #F44336) a(14%));
   }
 }
 
@@ -10465,10 +10372,8 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 }
 
 .mdc-icon-toggle--primary.mdc-ripple-upgraded::after {
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  background-color: rgba(255, 152, 0, 0.14);
+  background-color: rgba(244, 67, 54, 0.14);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
   position: absolute;
   width: var(--mdc-ripple-fg-size);
@@ -10485,7 +10390,7 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
 @supports (background-color: color(green a(10%))) {
   .mdc-icon-toggle--primary.mdc-ripple-upgraded::after {
-    background-color: color(var(--mdc-theme-primary, #FF9800) a(14%));
+    background-color: color(var(--mdc-theme-primary, #F44336) a(14%));
   }
 }
 
@@ -10526,23 +10431,15 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 }
 
 .mdc-icon-toggle--accent.mdc-ripple-upgraded {
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
 }
 
 .mdc-icon-toggle--accent.mdc-ripple-upgraded::before {
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  background-color: rgba(3, 169, 244, 0.14);
+  background-color: rgba(255, 152, 0, 0.14);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
   position: absolute;
   top: calc(50% - 100%);
@@ -10561,7 +10458,7 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
 @supports (background-color: color(green a(10%))) {
   .mdc-icon-toggle--accent.mdc-ripple-upgraded::before {
-    background-color: color(var(--mdc-theme-accent, #03A9F4) a(14%));
+    background-color: color(var(--mdc-theme-accent, #FF9800) a(14%));
   }
 }
 
@@ -10588,10 +10485,8 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 }
 
 .mdc-icon-toggle--accent.mdc-ripple-upgraded::after {
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  background-color: rgba(3, 169, 244, 0.14);
+  background-color: rgba(255, 152, 0, 0.14);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
   position: absolute;
   width: var(--mdc-ripple-fg-size);
@@ -10608,7 +10503,7 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
 @supports (background-color: color(green a(10%))) {
   .mdc-icon-toggle--accent.mdc-ripple-upgraded::after {
-    background-color: color(var(--mdc-theme-accent, #03A9F4) a(14%));
+    background-color: color(var(--mdc-theme-accent, #FF9800) a(14%));
   }
 }
 
@@ -10901,8 +10796,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -10915,7 +10808,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -10926,8 +10818,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -10967,7 +10857,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -11481,8 +11370,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -11495,7 +11382,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -11506,8 +11392,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -11547,7 +11431,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -11733,8 +11616,8 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
 .mdc-simple-menu--selected.mdc-list-item,
 .mdc-simple-menu--selected.mdc-list-item .mdc-list-item__start-detail {
-  color: #FF9800;
-  color: var(--mdc-theme-primary, #FF9800);
+  color: #F44336;
+  color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-simple-menu .mdc-list-item::before {
@@ -11887,8 +11770,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -11901,7 +11782,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -12074,8 +11954,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -12088,7 +11966,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -12099,8 +11976,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -12140,7 +12015,6 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /* postcss-bem-linter: define radio */
 .mdc-radio {
   display: inline-block;
@@ -12162,8 +12036,8 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 }
 
 .mdc-radio__background::before {
-  background-color: #FF9800;
-  background-color: var(--mdc-theme-primary, #FF9800);
+  background-color: #F44336;
+  background-color: var(--mdc-theme-primary, #F44336);
   position: absolute;
   top: 0;
   left: 0;
@@ -12268,13 +12142,13 @@ fieldset:disabled .mdc-fab, .mdc-fab:disabled {
 }
 
 .mdc-radio__native-control:checked + .mdc-radio__background .mdc-radio__outer-circle {
-  border-color: #FF9800;
-  border-color: var(--mdc-theme-primary, #FF9800);
+  border-color: #F44336;
+  border-color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-radio__native-control:checked + .mdc-radio__background .mdc-radio__inner-circle {
-  background-color: #FF9800;
-  background-color: var(--mdc-theme-primary, #FF9800);
+  background-color: #F44336;
+  background-color: var(--mdc-theme-primary, #F44336);
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
   -webkit-transition: background-color 120ms 0ms cubic-bezier(0, 0, 0.2, 1), -webkit-transform 120ms 0ms cubic-bezier(0, 0, 0.2, 1);
@@ -12348,23 +12222,15 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
   --mdc-ripple-fg-approx-xf: 0;
   will-change: transition, opacity;
   -webkit-tap-highlight-color: transparent;
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
 }
 
 .mdc-radio.mdc-ripple-upgraded::before {
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  background-color: rgba(255, 152, 0, 0.14);
+  background-color: rgba(244, 67, 54, 0.14);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
   position: absolute;
   top: calc(50% - 100%);
@@ -12383,7 +12249,7 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
 @supports (background-color: color(green a(10%))) {
   .mdc-radio.mdc-ripple-upgraded::before {
-    background-color: color(var(--mdc-theme-primary, #FF9800) a(14%));
+    background-color: color(var(--mdc-theme-primary, #F44336) a(14%));
   }
 }
 
@@ -12410,10 +12276,8 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 }
 
 .mdc-radio.mdc-ripple-upgraded::after {
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  background-color: rgba(255, 152, 0, 0.14);
+  background-color: rgba(244, 67, 54, 0.14);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
   position: absolute;
   width: var(--mdc-ripple-fg-size);
@@ -12430,7 +12294,7 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
 @supports (background-color: color(green a(10%))) {
   .mdc-radio.mdc-ripple-upgraded::after {
-    background-color: color(var(--mdc-theme-primary, #FF9800) a(14%));
+    background-color: color(var(--mdc-theme-primary, #F44336) a(14%));
   }
 }
 
@@ -12591,8 +12455,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -12605,7 +12467,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -12616,8 +12477,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -12657,7 +12516,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -12730,8 +12588,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -12744,7 +12600,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -12892,20 +12747,13 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
   --mdc-ripple-fg-approx-xf: 0;
   will-change: transition, opacity;
   -webkit-tap-highlight-color: transparent;
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
 }
 
 .mdc-ripple-surface.mdc-ripple-upgraded::before {
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   background-color: rgba(0, 0, 0, 0.06);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
@@ -12947,7 +12795,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 }
 
 .mdc-ripple-surface.mdc-ripple-upgraded::after {
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   background-color: rgba(0, 0, 0, 0.06);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
@@ -13001,28 +12848,20 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 }
 
 .mdc-ripple-surface--primary.mdc-ripple-upgraded {
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
 }
 
 .mdc-ripple-surface--primary.mdc-ripple-upgraded::before, .mdc-ripple-surface--primary.mdc-ripple-upgraded::after {
-  background-color: #FF9800;
-  background-color: var(--mdc-theme-primary, #FF9800);
+  background-color: #F44336;
+  background-color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-ripple-surface--primary.mdc-ripple-upgraded::before {
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  background-color: rgba(255, 152, 0, 0.14);
+  background-color: rgba(244, 67, 54, 0.14);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
   position: absolute;
   top: calc(50% - 100%);
@@ -13041,7 +12880,7 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
 @supports (background-color: color(green a(10%))) {
   .mdc-ripple-surface--primary.mdc-ripple-upgraded::before {
-    background-color: color(var(--mdc-theme-primary, #FF9800) a(14%));
+    background-color: color(var(--mdc-theme-primary, #F44336) a(14%));
   }
 }
 
@@ -13068,10 +12907,8 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 }
 
 .mdc-ripple-surface--primary.mdc-ripple-upgraded::after {
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  background-color: rgba(255, 152, 0, 0.14);
+  background-color: rgba(244, 67, 54, 0.14);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
   position: absolute;
   width: var(--mdc-ripple-fg-size);
@@ -13088,7 +12925,7 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
 @supports (background-color: color(green a(10%))) {
   .mdc-ripple-surface--primary.mdc-ripple-upgraded::after {
-    background-color: color(var(--mdc-theme-primary, #FF9800) a(14%));
+    background-color: color(var(--mdc-theme-primary, #F44336) a(14%));
   }
 }
 
@@ -13129,28 +12966,20 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 }
 
 .mdc-ripple-surface--accent.mdc-ripple-upgraded {
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
 }
 
 .mdc-ripple-surface--accent.mdc-ripple-upgraded::before, .mdc-ripple-surface--accent.mdc-ripple-upgraded::after {
-  background-color: #FF9800;
-  background-color: var(--mdc-theme-primary, #FF9800);
+  background-color: #F44336;
+  background-color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-ripple-surface--accent.mdc-ripple-upgraded::before {
-  /* stylelint-disable scss/dollar-variable-pattern */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  background-color: rgba(3, 169, 244, 0.14);
+  background-color: rgba(255, 152, 0, 0.14);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
   position: absolute;
   top: calc(50% - 100%);
@@ -13169,7 +12998,7 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
 @supports (background-color: color(green a(10%))) {
   .mdc-ripple-surface--accent.mdc-ripple-upgraded::before {
-    background-color: color(var(--mdc-theme-accent, #03A9F4) a(14%));
+    background-color: color(var(--mdc-theme-accent, #FF9800) a(14%));
   }
 }
 
@@ -13196,10 +13025,8 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 }
 
 .mdc-ripple-surface--accent.mdc-ripple-upgraded::after {
-  /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable at-rule-empty-line-before, block-closing-brace-newline-after */
-  /* stylelint-enable scss/dollar-variable-pattern */
-  background-color: rgba(3, 169, 244, 0.14);
+  background-color: rgba(255, 152, 0, 0.14);
   /* stylelint-enable at-rule-empty-line-before, block-closing-brace-newline-after */
   position: absolute;
   width: var(--mdc-ripple-fg-size);
@@ -13216,7 +13043,7 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
 @supports (background-color: color(green a(10%))) {
   .mdc-ripple-surface--accent.mdc-ripple-upgraded::after {
-    background-color: color(var(--mdc-theme-accent, #03A9F4) a(14%));
+    background-color: color(var(--mdc-theme-accent, #FF9800) a(14%));
   }
 }
 
@@ -13406,8 +13233,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -13420,7 +13245,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -13431,8 +13255,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -13472,7 +13294,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -13693,8 +13514,8 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 }
 
 .mdc-select:focus {
-  border-bottom-color: #FF9800;
-  border-bottom-color: var(--mdc-theme-primary, #FF9800);
+  border-bottom-color: #F44336;
+  border-bottom-color: var(--mdc-theme-primary, #F44336);
   outline: none;
   background-color: rgba(0, 0, 0, 0.06);
 }
@@ -13713,8 +13534,8 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
 .mdc-select--theme-dark:focus,
 .mdc-theme--dark .mdc-select:focus {
-  border-bottom-color: #FF9800;
-  border-bottom-color: var(--mdc-theme-primary, #FF9800);
+  border-bottom-color: #F44336;
+  border-bottom-color: var(--mdc-theme-primary, #F44336);
   background-color: rgba(255, 255, 255, 0.09);
 }
 
@@ -14111,8 +13932,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -14125,7 +13944,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -14136,8 +13954,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -14177,7 +13993,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -14364,8 +14179,8 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 }
 
 .mdc-snackbar__action-button {
-  color: #03A9F4;
-  color: var(--mdc-theme-accent, #03A9F4);
+  color: #FF9800;
+  color: var(--mdc-theme-accent, #FF9800);
   /* stylelint-disable scss/dollar-variable-pattern */
   /* stylelint-disable scss/dollar-variable-pattern */
   margin-left: 0;
@@ -14655,8 +14470,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -14669,7 +14482,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -14752,8 +14564,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -14766,7 +14576,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -14777,8 +14586,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -14818,7 +14625,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -15086,8 +14892,8 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 }
 
 .mdc-textfield--focused.mdc-textfield--upgraded:not(.mdc-textfield--fullwidth):not(.mdc-textfield--multiline)::after {
-  background-color: #FF9800;
-  background-color: var(--mdc-theme-primary, #FF9800);
+  background-color: #F44336;
+  background-color: var(--mdc-theme-primary, #F44336);
   -webkit-transform: translateY(100%) scaleY(2);
           transform: translateY(100%) scaleY(2);
   -webkit-transition: -webkit-transform 180ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -15098,8 +14904,8 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
 .mdc-textfield--theme-dark.mdc-textfield--focused.mdc-textfield--upgraded:not(.mdc-textfield--fullwidth):not(.mdc-textfield--multiline)::after,
 .mdc-theme--dark .mdc-textfield--focused.mdc-textfield--upgraded:not(.mdc-textfield--fullwidth):not(.mdc-textfield--multiline)::after {
-  background-color: #FF9800;
-  background-color: var(--mdc-theme-primary, #FF9800);
+  background-color: #F44336;
+  background-color: var(--mdc-theme-primary, #F44336);
   -webkit-transform: translateY(100%) scaleY(2);
           transform: translateY(100%) scaleY(2);
   -webkit-transition: -webkit-transform 180ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -15109,14 +14915,14 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 }
 
 .mdc-textfield--focused .mdc-textfield__label {
-  color: #FF9800;
-  color: var(--mdc-theme-primary, #FF9800);
+  color: #F44336;
+  color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-textfield--theme-dark .mdc-textfield--focused .mdc-textfield__label,
 .mdc-theme--dark .mdc-textfield--focused .mdc-textfield__label {
-  color: #FF9800;
-  color: var(--mdc-theme-primary, #FF9800);
+  color: #F44336;
+  color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-textfield--dense {
@@ -15245,8 +15051,8 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 }
 
 .mdc-textfield--multiline .mdc-textfield__input:focus {
-  border-color: #FF9800;
-  border-color: var(--mdc-theme-primary, #FF9800);
+  border-color: #F44336;
+  border-color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-textfield--multiline .mdc-textfield__input:invalid:not(:focus) {
@@ -15346,8 +15152,8 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 }
 
 .mdc-textfield:not(.mdc-textfield--upgraded) .mdc-textfield__input:focus {
-  border-color: #FF9800;
-  border-color: var(--mdc-theme-primary, #FF9800);
+  border-color: #F44336;
+  border-color: var(--mdc-theme-primary, #F44336);
 }
 
 .mdc-textfield:not(.mdc-textfield--upgraded) .mdc-textfield__input:disabled {
@@ -15523,8 +15329,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
   This lookup table is needed since there is no `pow` in SASS.
 */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Calculate the luminance for a color.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -15537,7 +15341,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
  * Determine whether to use dark or light text on top of given color.
  * Returns "dark" for dark text and "light" for light text.
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 /*
   Main theme colors.
   If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
@@ -15548,8 +15351,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 /* Which set of text colors to use for each main theme color (light or dark) */
 /* Text colors according to light vs dark and text type */
 /* Primary text colors for each of the theme colors */
-/* All variables are local, so disable pattern checking. */
-/* stylelint-disable scss/dollar-variable-pattern */
 /**
  * Applies the correct theme color style to the specified property.
  * $property is typically color or background-color, but can be any CSS property that accepts color values.
@@ -15589,16 +15390,15 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
  * }
  * ```
  */
-/* stylelint-enable scss/dollar-variable-pattern */
 :root {
-  --mdc-theme-primary: #FF9800;
-  --mdc-theme-accent: #03A9F4;
+  --mdc-theme-primary: #F44336;
+  --mdc-theme-accent: #FF9800;
   --mdc-theme-background: #FAFAFA;
-  --mdc-theme-text-primary-on-primary: rgba(0, 0, 0, 0.87);
-  --mdc-theme-text-secondary-on-primary: rgba(0, 0, 0, 0.54);
-  --mdc-theme-text-hint-on-primary: rgba(0, 0, 0, 0.38);
-  --mdc-theme-text-disabled-on-primary: rgba(0, 0, 0, 0.38);
-  --mdc-theme-text-icon-on-primary: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-primary-on-primary: white;
+  --mdc-theme-text-secondary-on-primary: rgba(255, 255, 255, 0.7);
+  --mdc-theme-text-hint-on-primary: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-disabled-on-primary: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-icon-on-primary: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-primary-on-accent: rgba(0, 0, 0, 0.87);
   --mdc-theme-text-secondary-on-accent: rgba(0, 0, 0, 0.54);
   --mdc-theme-text-hint-on-accent: rgba(0, 0, 0, 0.38);
@@ -15628,38 +15428,38 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 }
 
 .mdc-theme--primary {
-  color: #FF9800 !important;
-  color: var(--mdc-theme-primary, #FF9800) !important;
+  color: #F44336 !important;
+  color: var(--mdc-theme-primary, #F44336) !important;
 }
 
 .mdc-theme--accent {
-  color: #03A9F4 !important;
-  color: var(--mdc-theme-accent, #03A9F4) !important;
+  color: #FF9800 !important;
+  color: var(--mdc-theme-accent, #FF9800) !important;
 }
 
 .mdc-theme--text-primary-on-primary {
-  color: rgba(0, 0, 0, 0.87) !important;
-  color: var(--mdc-theme-text-primary-on-primary, rgba(0, 0, 0, 0.87)) !important;
+  color: white !important;
+  color: var(--mdc-theme-text-primary-on-primary, white) !important;
 }
 
 .mdc-theme--text-secondary-on-primary {
-  color: rgba(0, 0, 0, 0.54) !important;
-  color: var(--mdc-theme-text-secondary-on-primary, rgba(0, 0, 0, 0.54)) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  color: var(--mdc-theme-text-secondary-on-primary, rgba(255, 255, 255, 0.7)) !important;
 }
 
 .mdc-theme--text-hint-on-primary {
-  color: rgba(0, 0, 0, 0.38) !important;
-  color: var(--mdc-theme-text-hint-on-primary, rgba(0, 0, 0, 0.38)) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: var(--mdc-theme-text-hint-on-primary, rgba(255, 255, 255, 0.5)) !important;
 }
 
 .mdc-theme--text-disabled-on-primary {
-  color: rgba(0, 0, 0, 0.38) !important;
-  color: var(--mdc-theme-text-disabled-on-primary, rgba(0, 0, 0, 0.38)) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: var(--mdc-theme-text-disabled-on-primary, rgba(255, 255, 255, 0.5)) !important;
 }
 
 .mdc-theme--text-icon-on-primary {
-  color: rgba(0, 0, 0, 0.38) !important;
-  color: var(--mdc-theme-text-icon-on-primary, rgba(0, 0, 0, 0.38)) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: var(--mdc-theme-text-icon-on-primary, rgba(255, 255, 255, 0.5)) !important;
 }
 
 .mdc-theme--text-primary-on-accent {
@@ -15764,13 +15564,13 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background .mdc-radio
 
 /* CSS rules for using primary and accent as background colors. */
 .mdc-theme--primary-bg {
-  background-color: #FF9800 !important;
-  background-color: var(--mdc-theme-primary, #FF9800) !important;
+  background-color: #F44336 !important;
+  background-color: var(--mdc-theme-primary, #F44336) !important;
 }
 
 .mdc-theme--accent-bg {
-  background-color: #03A9F4 !important;
-  background-color: var(--mdc-theme-accent, #03A9F4) !important;
+  background-color: #FF9800 !important;
+  background-color: var(--mdc-theme-accent, #FF9800) !important;
 }
 
 /**
@@ -16009,7 +15809,7 @@ button:focus {
 
 .mdc-button {
   font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .mdc-card__supporting-text {
@@ -16205,23 +16005,26 @@ html, body {
   background-image: url("../images/avatar-default.png");
 }
 
+.t2b-avatar-potchy {
+  background-image: url("../images/avatar-potchy.jpg");
+}
+
 .t2b-card {
   border-radius: 0.3rem;
   -webkit-transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
   transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 
 .t2b-card:hover {
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 
 .t2b-card-primary {
-  border-top: 0.3rem solid #FF9800;
+  border-top: 0.3rem solid #F44336;
 }
 
 .t2b-card-accent {
-  border-top: 0.3rem solid #03A9F4;
+  border-top: 0.3rem solid #FF9800;
 }
 
 .t2b-card-action:first-child {
@@ -16269,6 +16072,19 @@ html, body {
   }
 }
 
+.t2b-display-title {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+@media (min-width: 576px) {
+  .t2b-display-title {
+    font-size: 3.5rem;
+  }
+}
+
 .t2b-navbar-container {
   display: block;
 }
@@ -16310,7 +16126,7 @@ html, body {
 }
 
 .t2b-navbar-cell-links .active {
-  border-bottom: 0.125rem solid #FF9800;
+  border-bottom: 0.125rem solid #F44336;
 }
 
 @media (min-width: 768px) {
@@ -16333,6 +16149,10 @@ html, body {
 
 .border-none {
   border: none;
+}
+
+.border-primary-bold {
+  border: 2px solid #F44336;
 }
 
 .line-height-base {

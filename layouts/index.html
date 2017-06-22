@@ -5,39 +5,61 @@
 <div class="t2b-cover t2b-cover-default">
   <div class="t2b-cover-overlay full-width full-height"></div>
   <div class="container">
-    <div class="t2b-display text-center text-uppercase mdc-theme--text-primary-on-primary">
+    <div class="t2b-display text-center text-uppercase mdc-theme--text-primary-on-background">
       <span>Where</span>
       <br class="hidden-md-up">
-      <span class="gutter-padding-horizontal radius-lg mdc-theme--primary-bg mdc-elevation--z2">Thoughts</span>
+      <span class="gutter-padding-horizontal border-primary-bold radius-lg mdc-elevation--z2">Thoughts</span>
       <br class="hidden-lg-up">
       <span>turn to</span>
       <br class="hidden-md-up">
-      <span class="gutter-padding-horizontal radius-lg mdc-theme--primary-bg mdc-elevation--z2">Bits</span>
+      <span class="gutter-padding-horizontal border-primary-bold radius-lg mdc-elevation--z2">Bits</span>
     </div>
   </div>
 </div>
 
-<div class="container full-padding-vertical">
-  <h3>Recent Blog Posts</h3>
-  <div class="row">
-    {{ range where .Site.Pages "Section" "posts" | first 6 }}
-      <div class="col-xs-12 col-md-6 col-lg-4 gutter-padding-vertical">
-        <a href="{{ .RelPermalink }}" class="t2b-card t2b-card-primary mdc-card">
-          <section class="mdc-card__primary">
-            <h4 class="mdc-theme--primary">{{ .Title }}</h4>
-            <span class="mdc-theme--text-hint-on-background">{{ .Date.Format "Jan 02, 2006" }} - Read in {{ .ReadingTime }} Min</span>
-          </section>
-          <section class="mdc-card__supporting-text hidden-xs-down">
-            <span class="lead">{{ .Summary }}{{ if .Truncated }}...{{ end }}</span>
-          </section>
-          {{ if .Truncated }}
-          <section class="mdc-card__actions">
-            <button class="t2b-card-action mdc-card__action mdc-button mdc-button--compact mdc-button--primary text-uppercase">Read More &rarr;</button>
-          </section>
-          {{ end }}
-        </a>
-      </div>
-    {{ end }}
+<div class="container gutter-padding-vertical">
+  <div class="gutter-padding-vertical">
+    <h3>Recent Blog Posts</h3>
+    <div class="row">
+      {{ range where .Site.Pages "Section" "posts" | first 6 }}
+        <div class="col-xs-12 col-md-6 col-lg-4 gutter-padding-vertical">
+          <a href="{{ .RelPermalink }}" class="t2b-card t2b-card-primary mdc-card">
+            <section class="mdc-card__primary">
+              <h4 class="mdc-theme--primary">{{ .Title }}</h4>
+              <span class="mdc-theme--text-hint-on-background">{{ .Date.Format "Jan 02, 2006" }} - Read in {{ .ReadingTime }} Min</span>
+            </section>
+            <section class="mdc-card__supporting-text hidden-xs-down">
+              <span class="lead">{{ .Summary }}</span>
+            </section>
+            <section class="mdc-card__actions">
+              <button class="t2b-card-action mdc-card__action mdc-button mdc-button--compact mdc-button--primary text-uppercase">Read More</button>
+            </section>
+          </a>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="gutter-padding-vertical">
+    <h3>Recent Notes</h3>
+    <div class="row">
+      {{ range where .Site.Pages "Section" "notes" | first 6 }}
+        <div class="col-xs-12 col-md-6 col-lg-4 gutter-padding-vertical">
+          <a href="{{ .RelPermalink }}" class="t2b-card t2b-card-primary mdc-card">
+            <section class="mdc-card__primary">
+              <h4 class="mdc-theme--primary">{{ .Title }}</h4>
+              <span class="mdc-theme--text-hint-on-background">{{ .Date.Format "Jan 02, 2006" }} - Read in {{ .ReadingTime }} Min</span>
+            </section>
+            <section class="mdc-card__supporting-text hidden-xs-down">
+              <span class="lead">{{ .Summary }}</span>
+            </section>
+            <section class="mdc-card__actions">
+              <button class="t2b-card-action mdc-card__action mdc-button mdc-button--compact mdc-button--primary text-uppercase">Read More</button>
+            </section>
+          </a>
+        </div>
+      {{ end }}
+    </div>
   </div>
 </div>
 

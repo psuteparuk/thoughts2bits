@@ -20,13 +20,13 @@
   <aside>
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        {{ with .Params.categories }}
+        {{ with .Params.series }}
           {{ if gt (len .) 0 }}
-          <h6>Categories</h6>
+          <h6>Series</h6>
           <ul class="list-inline">
             {{ range . }}
             <li class="display-inline-block">
-              <a class="mdc-button mdc-button--raised mdc-button--dense mdc-button--compact" href="{{ $baseURL }}categories/{{ . | urlize }}">
+              <a class="mdc-button mdc-button--raised mdc-button--dense mdc-button--compact" href="{{ $baseURL }}series/{{ . | urlize }}">
                 <span>{{ . }}</span>
               </a>
             </li>

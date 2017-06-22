@@ -1,28 +1,36 @@
 $font-family-sans-serif: "Open Sans", Arial, sans-serif;
+$headings-font-family: "Open Sans", Arial, sans-serif;
 $font-weight-normal: 300;
-$font-weight-bold: 500;
-$headings-font-weight: 500;
+$font-weight-bold: 600;
+$headings-font-weight: 600;
 
 // colors
-$color-gold-drop: #F57C00;
+$color-persian-red: #D32F2F;
+$color-pomegranate: #F44336;
+$color-pastel-pink: #FFCDD2;
 $color-orange-peel: #FF9800;
-$color-frangipani: #FFE0B2;
-$color-cerulean: #03A9F4;
 $color-mine-shaft: #212121;
 $color-boulder: #757575;
 $color-silver: #BDBDBD;
 $color-gallery: #EEEEEE;
 $color-alabaster: #FAFAFA;
 
+// $color-seance-dark: #7B1FA2;
+// $color-seance: #9C27B0;
+// $color-french-lilac: #E1BEE7;
+// $color-gold-drop: #F57C00;
+// $color-orange-peel: #FF9800;
+// $color-frangipani: #FFE0B2;
+// $color-cerulean: #03A9F4;
 // $color-fruit-salad: #4CAF50;
 // $color-sunshade: #FFA726;
 
-$brand-primary: $color-orange-peel;
-$brand-accent: $color-cerulean;
+$brand-primary: $color-pomegranate;
+$brand-accent: $color-orange-peel;
 $body-bg: $color-alabaster;
 
-$brand-primary-dark: $color-gold-drop;
-$brand-primary-light: $color-frangipani;
+$brand-primary-dark: $color-persian-red;
+$brand-primary-light: $color-pastel-pink;
 
 $gray-dark: $color-mine-shaft;
 $gray: $color-boulder;
@@ -32,8 +40,8 @@ $gray-lightest: $color-alabaster;
 
 $link-hover-color: $brand-primary-dark;
 
-$mdc-theme-primary: $color-orange-peel;
-$mdc-theme-accent: $color-cerulean;
+$mdc-theme-primary: $color-pomegranate;
+$mdc-theme-accent: $color-orange-peel;
 $mdc-theme-background: $color-alabaster;
 
 $duration-base: .2s;

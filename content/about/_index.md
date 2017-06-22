@@ -1,7 +1,6 @@
 +++
 date = "2017-01-23T17:15:34+07:00"
 title = "About Me"
-mainimage = "images/avatar-potchy.jpg"
 draft = true
 
 +++

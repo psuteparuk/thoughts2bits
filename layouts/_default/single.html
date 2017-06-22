@@ -3,7 +3,7 @@
 {{ partial "header.html" . }}
 
 <div class="container full-padding-vertical">
-  <div class="t2b-display text-center">
+  <div class="t2b-display-title text-center">
     <span>{{ .Title }}</span>
   </div>
 
@@ -14,10 +14,10 @@
   <aside>
     <div class="full-width gutter-padding clearfix">
       {{ if .PrevInSection }}
-      <a class="text-lg pull-left" href="{{ .PrevInSection.Permalink }}" rel="prev">&larr; PREV: {{ .PrevInSection.Title }}</a>
+      <a class="text-lg pull-left" href="{{ .PrevInSection.Permalink }}" rel="prev">&larr; {{ .PrevInSection.Title }}</a>
       {{ end }}
       {{ if .NextInSection }}
-      <a class="text-lg pull-right" href="{{ .NextInSection.Permalink }}" rev="next">NEXT: {{ .NextInSection.Title }} &rarr;</a>
+      <a class="text-lg pull-right" href="{{ .NextInSection.Permalink }}" rev="next">{{ .NextInSection.Title }} &rarr;</a>
       {{ end }}
     </div>
   </aside>
