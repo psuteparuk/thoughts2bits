@@ -1,46 +1,78 @@
 {
   "name": "thoughts2bits",
+  "description": "Thoughts 2 Bits",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "serve": "gulp compile:css",
-    "serve:watch": "gulp",
-    "start": "npm run serve:watch"
-  },
   "author": "Potcharapol Suteparuk <psuteparuk@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "@material/animation": "^0.1.1",
-    "@material/button": "^0.1.1",
-    "@material/card": "^0.1.1",
-    "@material/checkbox": "^0.1.1",
-    "@material/drawer": "^0.1.1",
-    "@material/elevation": "^0.1.1",
-    "@material/fab": "^0.2.0",
-    "@material/form-field": "^0.1.0",
-    "@material/icon-toggle": "^0.1.1",
-    "@material/list": "^0.1.0",
-    "@material/menu": "^0.1.1",
-    "@material/radio": "^0.1.1",
-    "@material/ripple": "^0.1.1",
-    "@material/select": "^0.1.1",
-    "@material/snackbar": "^0.1.1",
-    "@material/textfield": "^0.1.1",
-    "@material/theme": "^0.1.0",
-    "@material/typography": "^0.1.0",
-    "bootstrap": "^4.0.0-alpha.6",
-    "material-components-web": "^0.2.0"
+  "private": true,
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ],
+  "scripts": {
+    "//": " --- GENERAL --- ",
+    "reinstall": "rimraf node_modules && npm cache clean && npm install",
+    "start": "npm-run-all -p serve watch",
+
+    "//": " --- CSS --- ",
+    "css:dev": "node-sass src/css/main.scss --output-style compressed > static/css/main.css",
+    "css:prod": "node-sass src/css/main.scss --output-style compressed | postcss -u autoprefixer > static/css/main.css",
+
+    "//": " --- IMAGES --- ",
+    "copy:images": "cp -r src/images static/",
+
+    "//": " --- JAVASCRIPT --- ",
+    "js:dev": "babel src/js | uglifyjs > static/js/main.js",
+    "js:prod": "babel src/js | uglifyjs -m -c > static/js/main.js",
+
+    "//": " --- BUILD (COMMON) --- ",
+    "clean": "rimraf static/css static/images static/js public",
+    "mkdirs": "mkdir -p static/css && mkdir -p static/images && mkdir -p static/js",
+    "copy": "npm run copy:images",
+
+    "//": " --- BUILD (DEVELOPMENT) --- ",
+    "prebuild:dev": "npm-run-all clean mkdirs copy",
+    "build:dev": "npm-run-all -p css:dev js:dev",
+
+    "//": " --- BUILD (PRODUCTION) --- ",
+    "prebuild:prod": "npm-run-all clean mkdirs copy",
+    "build:prod": "npm-run-all -p css:prod js:prod",
+
+    "//": " --- HASHING --- ",
+    "hash": "hashmark '{css,js}/**/main.*' -d md5 -l 8 -c public '{dir}/{name}.{hash}{ext}' | replaceinfiles -S -s 'public/**/*.html'",
+    "posthash": "rm public/css/main.css && rm public/js/main.js",
+
+    "//": " --- SERVING --- ",
+    "preserve": "npm run build:dev",
+    "serve": "npm run hugo:dev",
+
+    "//": " --- WATCHING --- ",
+    "watch:css": "chokidar 'src/**/*.scss' -c 'npm run css:dev'",
+    "watch:js": "chokidar 'src/**/*.js' -c 'npm run js:dev'",
+    "watch": "npm-run-all -p watch:*",
+
+    "//": " --- HUGO --- ",
+    "hugo:dev": "hugo server --environment development",
+    "hugo:prod": "hugo --environment production",
+
+    "//": " --- PUBLISHING --- ",
+    "prepublish": "npm run build:prod",
+    "publish": "npm run hugo:prod",
+    "postpublish": "npm run hash"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-batch": "^1.0.5",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.0",
-    "gulp-watch": "^4.3.11",
-    "path": "^0.12.7",
-    "require-dir": "^0.3.1",
-    "rimraf": "^2.5.4"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "autoprefixer": "^9.5.0",
+    "chokidar-cli": "^1.2.2",
+    "hashmark": "^5.0.0",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.2",
+    "replaceinfiles": "^1.1.4",
+    "rimraf": "^2.6.3",
+    "uglify-js": "^3.5.2"
   }
 }
