@@ -4,6 +4,7 @@ baseURL = "http://thoughts2bits.com/"
 canonifyURLs = true
 copyright = "Copyright &copy; 2019 Thoughts2Bits"
 keywords = "Blog, Engineering, Thoughts, Bits, Thoughts2Bits"
+buildDrafts = true
 
 [params]
   author = "Potcharapol Suteparuk"

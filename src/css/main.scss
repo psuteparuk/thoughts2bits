@@ -1,8 +1,10 @@
-// @import 'variables';
-// @import 'vendor/index';
-// @import 'layouts/index';
+// Using the 7-1 pattern
+// https://sass-guidelin.es/#architecture
+
+// @import 'abstracts/index';
+@import 'vendors/index';
+// @import 'base/index';
+// @import 'layout/index';
 // @import 'components/index';
-// @import 'skin';
-.keep {
-  width: auto;
-}
+// @import 'pages/index';
+// @import 'themes/index';
