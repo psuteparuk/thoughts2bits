@@ -1,7 +1,4 @@
-{{ partial "head.html" . }}
-
-{{ partial "header.html" . }}
-
+{{ define "main" }}
 <div class="container full-padding-vertical">
   <div class="t2b-display-title text-center">
     <span>{{ .Title }}</span>
@@ -23,5 +20,4 @@
     </div>
   </article>
 </div>
-
-{{ partial "foot.html" . }}
+{{ end }}

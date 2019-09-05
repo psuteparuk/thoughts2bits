@@ -1,0 +1,24 @@
+{{ $baseURL := .Site.BaseURL }}
+{{ $currentSection := .Section }}
+{{ $kind := .Kind }}
+{{ $title := .Title }}
+
+<aside class="mdc-drawer mdc-drawer--modal" id="t2b-main-drawer">
+  <div class="mdc-drawer__content">
+    <nav class="mdc-list">
+      {{ range $section, $page := .Site.Sections }}
+        {{ if ne $page "" }}
+          {{ $isActive := or (eq $page.Type $currentSection) (and (eq $kind "section") (lower $title | eq $page.Type)) }}
+          <a
+            class="mdc-list-item {{ if $isActive }}mdc-list-item--activated{{ end }}"
+            href="{{ $baseURL }}{{ $page.Type }}"
+            aria-current="page">
+            <span class="mdc-list-item__text">{{ $page.Type | upper }}</span>
+          </a>
+        {{ end }}
+      {{ end }}
+    </nav>
+  </div>
+</aside>
+
+<div class="mdc-drawer-scrim"></div>
