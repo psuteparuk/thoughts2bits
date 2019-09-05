@@ -3,9 +3,18 @@
 {{ $kind := .Kind }}
 {{ $title := .Title }}
 
-<aside class="mdc-drawer mdc-drawer--modal" id="t2b-main-drawer">
+<aside class="t2b-main-drawer mdc-drawer mdc-drawer--modal">
+  <div class="mdc-drawer__header">
+    <h3 class="mdc-drawer__title">{{ .Site.Title }}</h3>
+  </div>
   <div class="mdc-drawer__content">
     <nav class="mdc-list">
+      <a
+        class="mdc-list-item {{ if .IsHome }}mdc-list-item--activated{{ end }}"
+        href="{{ $baseURL }}"
+        aria-current="page">
+        <span class="mdc-list-item__text">HOME</span>
+      </a>
       {{ range $section, $page := .Site.Sections }}
         {{ if ne $page "" }}
           {{ $isActive := or (eq $page.Type $currentSection) (and (eq $kind "section") (lower $title | eq $page.Type)) }}

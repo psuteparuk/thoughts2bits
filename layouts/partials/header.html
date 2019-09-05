@@ -3,29 +3,28 @@
 {{ $kind := .Kind }}
 {{ $title := .Title }}
 
-<div class="t2b-appbar t2b-appbar-height mdc-theme--primary mdc-theme--background mdc-elevation--z4">
-  <div class="full-width full-padding-horizontal">
-    <div class="t2b-navbar-container">
-      <div class="t2b-navbar-row">
-        <div class="t2b-navbar-cell t2b-navbar-cell-logo text-uppercase">
-          <a href="{{ $baseURL }}">Thoughts2Bits</a>
-        </div>
+<header class="t2b-top-app-bar mdc-top-app-bar">
+  <div class="mdc-top-app-bar__row">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      <button class="t2b-top-app-bar__navigation-icon mdc-top-app-bar__navigation-icon mdc-icon-button mdc-theme--primary">
+        <i class="fas fa-bars"></i>
+      </button>
+      <span class="t2b-top-app-bar__title mdc-top-app-bar__title">
+        <a class="mdc-theme--primary" href="{{ $baseURL }}">{{ .Site.Title }}</a>
+      </span>
 
-        <div class="t2b-navbar-cell t2b-navbar-cell-links full-width">
-          {{ range $section, $pages := .Site.Sections }}
-            {{ if ne $section "" }}
-              {{ $isActive := or (eq $section $currentSection) (and (eq $kind "section") (lower $title | eq $section)) }}
-              <a
-                class="mdc-button mdc-button--compact {{ if $isActive }}active{{ end }}"
-                href="{{ $baseURL }}{{ $section }}">
-                {{ $section }}
-              </a>
-            {{ end }}
+      <div class="t2b-top-app-bar__action-items">
+        {{ range $section, $page := .Site.Sections }}
+          {{ if ne $page "" }}
+            {{ $isActive := or (eq $page.Type $currentSection) (and (eq $kind "section") (lower $title | eq $page.Type)) }}
+            <a
+              class="mdc-button {{ if $isActive }}active{{ end }}"
+              href="{{ $baseURL }}{{ $page.Type }}">
+              {{ $page.Type }}
+            </a>
           {{ end }}
-        </div>
+        {{ end }}
       </div>
-    </div>
+    </section>
   </div>
-</div>
-
-<div class="t2b-appbar-height"></div>
+</header>

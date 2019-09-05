@@ -1,0 +1,26 @@
+.t2b-top-app-bar {
+  @include mdc-top-app-bar-fill-color(surface);
+  @include mdc-top-app-bar-icon-ink-color(on-surface);
+  @include mdc-top-app-bar-ink-color(on-surface);
+}
+
+.t2b-top-app-bar__title {
+  * {
+    text-decoration: none;
+  }
+}
+
+.t2b-top-app-bar__navigation-icon {
+  @media screen and (min-width: map-get($media-breakpoints, "desktop")) {
+    display: none;
+  }
+}
+
+.t2b-top-app-bar__action-items {
+  display: none;
+  margin-left: map-get($mdc-layout-grid-default-margin, "desktop");
+
+  @media screen and (min-width: map-get($media-breakpoints, "desktop")) {
+    display: inline-block;
+  }
+}
