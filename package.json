@@ -23,8 +23,8 @@
     "copy:images": "cp -r src/images static/",
 
     "//": " --- JAVASCRIPT --- ",
-    "js:dev": "babel src/js | uglifyjs > static/js/main.js",
-    "js:prod": "babel src/js | uglifyjs -m -c > static/js/main.js",
+    "js:dev": "browserify src/js/main.js -t [ babelify ] | uglifyjs > static/js/main.js",
+    "js:prod": "browserify src/js/main.js -t [ babelify ] | uglifyjs -m -c > static/js/main.js",
 
     "//": " --- BUILD (COMMON) --- ",
     "clean": "rimraf static/css static/images static/js public",
@@ -62,20 +62,30 @@
     "postpublish": "npm run hash"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "@material/button": "^1.1.0",
-    "@material/card": "^1.1.0",
-    "autoprefixer": "^9.5.0",
-    "chokidar-cli": "^1.2.2",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@material/button": "^3.1.0",
+    "@material/card": "^3.1.0",
+    "@material/drawer": "^3.1.1",
+    "@material/elevation": "^3.1.0",
+    "@material/icon-button": "^3.1.0",
+    "@material/layout-grid": "^3.1.0",
+    "@material/list": "^3.1.0",
+    "@material/theme": "^3.1.0",
+    "@material/top-app-bar": "^3.1.0",
+    "@material/typography": "^3.1.0",
+    "autoprefixer": "^9.6.1",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
+    "chokidar-cli": "^2.0.0",
     "hashmark": "^5.0.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^6.1.2",
+    "postcss-cli": "^6.1.3",
     "replaceinfiles": "^1.1.4",
-    "rimraf": "^2.6.3",
-    "uglify-js": "^3.5.2"
+    "rimraf": "^3.0.0",
+    "rxjs": "^6.5.3",
+    "uglify-js": "^3.6.0"
   }
 }

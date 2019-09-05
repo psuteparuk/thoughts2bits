@@ -1,20 +1,14 @@
-// $enable-flex: true;
-// $enable-grid-classes: true;
-
-// // use bootstrap grid and type
-// @import '~bootstrap/scss/_variables';
-// @import '~bootstrap/scss/_mixins.scss';
-// @import '~bootstrap/scss/_normalize';
-// @import '~bootstrap/scss/_reboot';
-// @import '~bootstrap/scss/_utilities';
-// @import '~bootstrap/scss/_grid';
-// @import '~bootstrap/scss/_type';
-
-// // material components web
-// @import '~material-components-web/material-components-web';
-
-// // overrides
-// @import './bootstrap-overrides';
-// @import './mdc-overrides';
-
+// normalize
 @import 'normalize.css/normalize';
+
+// material components
+@import '@material/button/mdc-button';
+@import '@material/card/mdc-card';
+@import '@material/drawer/mdc-drawer';
+@import '@material/elevation/mdc-elevation';
+@import '@material/icon-button/mdc-icon-button';
+@import '@material/layout-grid/mdc-layout-grid';
+@import '@material/list/mdc-list';
+@import '@material/theme/mdc-theme';
+@import '@material/top-app-bar/mdc-top-app-bar';
+@import '@material/typography/mdc-typography';

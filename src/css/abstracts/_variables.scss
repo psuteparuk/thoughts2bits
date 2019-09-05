@@ -1,19 +1,36 @@
-$font-family-sans-serif: "Open Sans", Arial, sans-serif;
-$headings-font-family: "Open Sans", Arial, sans-serif;
-$font-weight-normal: 300;
-$font-weight-bold: 600;
-$headings-font-weight: 600;
+$font-family-base: "Open Sans", Arial, sans-serif;
+$font-family-headings: Montserrat, Arial, sans-serif;
+
+$mdc-typography-font-family: $font-family-base;
+
+$mdc-typography-font-weight-values: (
+  light: 300,
+  regular: 400,
+  medium: 600
+);
+
+$mdc-typography-styles-headline1: (
+  font-family: $font-family-headings
+);
+
+$mdc-typography-styles-headline2: (
+  font-family: $font-family-headings
+);
+
+$mdc-typography-styles-headline3: (
+  font-family: $font-family-headings
+);
 
 // colors
-$color-persian-red: #D32F2F;
-$color-pomegranate: #F44336;
-$color-pastel-pink: #FFCDD2;
-$color-orange-peel: #FF9800;
-$color-mine-shaft: #212121;
-$color-boulder: #757575;
-$color-silver: #BDBDBD;
-$color-gallery: #EEEEEE;
-$color-alabaster: #FAFAFA;
+// $color-persian-red: #D32F2F;
+// $color-pomegranate: #F44336;
+// $color-pastel-pink: #FFCDD2;
+// $color-orange-peel: #FF9800;
+// $color-mine-shaft: #212121;
+// $color-boulder: #757575;
+// $color-silver: #BDBDBD;
+// $color-gallery: #EEEEEE;
+// $color-alabaster: #FAFAFA;
 
 // $color-seance-dark: #7B1FA2;
 // $color-seance: #9C27B0;
@@ -25,24 +42,26 @@ $color-alabaster: #FAFAFA;
 // $color-fruit-salad: #4CAF50;
 // $color-sunshade: #FFA726;
 
-$brand-primary: $color-pomegranate;
-$brand-accent: $color-orange-peel;
-$body-bg: $color-alabaster;
+$color-congo-brown: #523634;
+$color-well-read: #B6452C;
 
-$brand-primary-dark: $color-persian-red;
-$brand-primary-light: $color-pastel-pink;
+// $brand-primary: $color-pomegranate;
+// $brand-accent: $color-orange-peel;
+// $body-bg: $color-alabaster;
 
-$gray-dark: $color-mine-shaft;
-$gray: $color-boulder;
-$gray-light: $color-silver;
-$gray-lighter: $color-gallery;
-$gray-lightest: $color-alabaster;
+// $brand-primary-dark: $color-persian-red;
+// $brand-primary-light: $color-pastel-pink;
 
-$link-hover-color: $brand-primary-dark;
+// $gray-dark: $color-mine-shaft;
+// $gray: $color-boulder;
+// $gray-light: $color-silver;
+// $gray-lighter: $color-gallery;
+// $gray-lightest: $color-alabaster;
 
-$mdc-theme-primary: $color-pomegranate;
-$mdc-theme-accent: $color-orange-peel;
-$mdc-theme-background: $color-alabaster;
+// $link-hover-color: $brand-primary-dark;
+
+$mdc-theme-primary: $color-congo-brown;
+$mdc-theme-secondary: $color-well-read;
 
 $duration-base: .2s;
 $duration-fast: .15s;
