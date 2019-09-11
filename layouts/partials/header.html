@@ -6,11 +6,9 @@
 <header class="t2b-top-app-bar mdc-top-app-bar">
   <div class="mdc-top-app-bar__row">
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-      <button class="t2b-top-app-bar__navigation-icon mdc-top-app-bar__navigation-icon mdc-icon-button mdc-theme--primary">
-        <i class="fas fa-bars"></i>
-      </button>
+      <button class="t2b-top-app-bar__navigation-icon material-icons mdc-top-app-bar__navigation-icon mdc-icon-button mdc-theme--on-surface">menu</button>
       <span class="t2b-top-app-bar__title mdc-top-app-bar__title">
-        <a class="mdc-theme--primary" href="{{ $baseURL }}">{{ .Site.Title }}</a>
+        <a class="t2b-top-app-bar__logo" href="{{ $baseURL }}"></a>
       </span>
 
       <div class="t2b-top-app-bar__action-items">
@@ -18,9 +16,9 @@
           {{ if ne $page "" }}
             {{ $isActive := or (eq $page.Type $currentSection) (and (eq $kind "section") (lower $title | eq $page.Type)) }}
             <a
-              class="mdc-button {{ if $isActive }}active{{ end }}"
+              class="mdc-button {{ if $isActive }}mdc-button--outlined{{ end }} mdc-theme--text-hint-on-light"
               href="{{ $baseURL }}{{ $page.Type }}">
-              {{ $page.Type }}
+              <span class="mdc-button__label">{{ $page.Type }}</span>
             </a>
           {{ end }}
         {{ end }}

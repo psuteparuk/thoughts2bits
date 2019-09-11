@@ -1,17 +1,37 @@
 .t2b-top-app-bar {
-  @include mdc-top-app-bar-fill-color(surface);
+  @include mdc-top-app-bar-fill-color($gray-light);
   @include mdc-top-app-bar-icon-ink-color(on-surface);
   @include mdc-top-app-bar-ink-color(on-surface);
+  // @include mdc-elevation(4);
 }
 
 .t2b-top-app-bar__title {
-  * {
-    text-decoration: none;
+  padding-left: $mdc-top-app-bar-title-left-padding/2;
+
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(tablet)) {
+    padding-left: $mdc-top-app-bar-title-left-padding;
+  }
+}
+
+.t2b-top-app-bar__logo {
+  display: inline-block;
+  height: $mdc-top-app-bar-row-height*0.4;
+  width: $mdc-top-app-bar-row-height*4;
+  background: url("../images/logo-filled-transparent.png") no-repeat;
+  background-size: auto 100%;
+  vertical-align: middle;
+
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(tablet)) {
+    height: $mdc-top-app-bar-row-height/2;
+  }
+
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+    margin-bottom: 5px;
   }
 }
 
 .t2b-top-app-bar__navigation-icon {
-  @media screen and (min-width: map-get($media-breakpoints, "desktop")) {
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
     display: none;
   }
 }
@@ -20,7 +40,7 @@
   display: none;
   margin-left: map-get($mdc-layout-grid-default-margin, "desktop");
 
-  @media screen and (min-width: map-get($media-breakpoints, "desktop")) {
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
     display: inline-block;
   }
 }

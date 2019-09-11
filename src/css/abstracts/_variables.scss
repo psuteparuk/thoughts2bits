@@ -21,6 +21,10 @@ $mdc-typography-styles-headline3: (
   font-family: $font-family-headings
 );
 
+$mdc-typography-styles-headline4: (
+  font-family: $font-family-headings
+);
+
 // colors
 // $color-persian-red: #D32F2F;
 // $color-pomegranate: #F44336;
@@ -52,16 +56,15 @@ $color-well-read: #B6452C;
 // $brand-primary-dark: $color-persian-red;
 // $brand-primary-light: $color-pastel-pink;
 
-// $gray-dark: $color-mine-shaft;
-// $gray: $color-boulder;
-// $gray-light: $color-silver;
-// $gray-lighter: $color-gallery;
-// $gray-lightest: $color-alabaster;
+$gray-dark: #757575;
+$gray: #BDBDBD;
+$gray-light: #FAFAFA;
 
 // $link-hover-color: $brand-primary-dark;
 
-$mdc-theme-primary: $color-congo-brown;
-$mdc-theme-secondary: $color-well-read;
+$mdc-theme-primary: #DA3B01;
+$mdc-theme-secondary: #0277BD;
+$mdc-theme-background: #FFFFFF;
 
 $duration-base: .2s;
 $duration-fast: .15s;

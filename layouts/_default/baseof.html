@@ -3,13 +3,17 @@
   <head>
     {{ partial "meta.html" . }}
 
-    <title>{{ .Title }}{{ if not .IsHome }} | {{ .Site.Title }}{{ end }}</title>
+    {{ with .Title }}
+      <title>{{ . }}</title>
+    {{ else }}
+      <title>{{ .Site.Title }}</title>
+    {{ end }}
+
     {{ .Hugo.Generator }}
 
-    <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/logo.jpg">
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/logo-image-filled-transparent.png">
     <link rel="canonical" href="{{ .Permalink }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:400,600">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:400,600|Material+Icons">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
     {{ if .RSSLink }}<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />{{ end }}
 
@@ -20,11 +24,13 @@
   <body>
     {{ partial "drawer.html" . }}
 
-    <div class=".t2b-main-content">
+    <div class="t2b-main-content">
       {{ partial "header.html" . }}
 
-      {{ block "main" . }}
-      {{ end }}
+      <div class="mdc-top-app-bar--fixed-adjust">
+        {{ block "main" . }}
+        {{ end }}
+      </div>
     </div>
 
     <script type="text/javascript" src="{{ .Site.BaseURL }}js/main.js"></script>

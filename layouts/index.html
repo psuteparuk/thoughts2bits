@@ -1,5 +1,24 @@
 {{ define "main" }}
-<div class="t2b-cover t2b-cover-default">
+{{ $baseURL := .Site.BaseURL }}
+
+<div class="t2b-cover--container mdc-layout-grid bg-gray-light">
+  <div class="mdc-layout-grid__inner">
+    <div class="t2b-cover--text mdc-layout-grid__cell mdc-layout-grid__cell--align-middle mdc-layout-grid__cell--span-5-desktop">
+      <p class="t2b-cover--headline">{{ .Params.coverHeadline }}</p>
+      <p class="t2b-cover--subtitle">{{ .Params.coverSubtitle }}</p>
+      <a class="mdc-button mdc-button--raised" href="#">
+        <span class="mdc-button__label">Contact Us</span>
+      </a>
+    </div>
+    <div class="t2b-cover--image mdc-layout-grid__cell mdc-layout-grid__cell--align-middle mdc-layout-grid__cell--span-7-desktop">
+      <picture>
+        <img class="t2b-cover--image full-width" src="{{ $baseURL }}images/cover-transparent.png" alt="Cover" title="Cover" />
+      </picture>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="t2b-cover t2b-cover-default">
   <div class="t2b-cover-overlay full-width full-height"></div>
   <div class="container">
     <div class="t2b-display text-center text-uppercase mdc-theme--text-primary-on-background">
@@ -58,5 +77,6 @@
       {{ end }}
     </div>
   </div>
-</div>
+</div> -->
+<a href="https://www.freepik.com/free-photos-vectors/banner">Banner vector created by fullvector - www.freepik.com</a>
 {{ end }}
