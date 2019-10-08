@@ -34,6 +34,7 @@
 
 .t2b-cover--headline {
   @include mdc-typography(headline4);
+  margin-top: 12px;
   margin-bottom: 12px;
 
   @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {

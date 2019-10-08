@@ -1,38 +1,80 @@
-// .gutter-padding {
-//   padding: $grid-gutter-width-base/2;
-// }
+.t2b-padding {
+  padding: map-get($mdc-layout-grid-default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+    padding: map-get($mdc-layout-grid-default-gutter, desktop);
+  }
+}
 
-// .gutter-padding-horizontal {
-//   padding-left: $grid-gutter-width-base/2;
-//   padding-right: $grid-gutter-width-base/2;
-// }
+.t2b-padding-horizontal {
+  padding-left: map-get($mdc-layout-grid-default-gutter, phone);
+  padding-right: map-get($mdc-layout-grid-default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+    padding-left: map-get($mdc-layout-grid-default-gutter, desktop);
+    padding-right: map-get($mdc-layout-grid-default-gutter, desktop);
+  }
+}
 
-// .gutter-padding-vertical {
-//   padding-top: $grid-gutter-width-base/2;
-//   padding-bottom: $grid-gutter-width-base/2;
-// }
+.t2b-padding-vertical {
+  padding-top: map-get($mdc-layout-grid-default-gutter, phone);
+  padding-bottom: map-get($mdc-layout-grid-default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+    padding-top: map-get($mdc-layout-grid-default-gutter, desktop);
+    padding-bottom: map-get($mdc-layout-grid-default-gutter, desktop);
+  }
+}
 
-// .gutter-padding-top {
-//   padding-top: $grid-gutter-width-base/2;
-// }
+.t2b-padding-top {
+  padding-top: map-get($mdc-layout-grid-default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+    padding-top: map-get($mdc-layout-grid-default-gutter, desktop);
+  }
+}
 
-// .gutter-padding-bottom {
-//   padding-bottom: $grid-gutter-width-base/2;
-// }
+.t2b-padding-bottom {
+  padding-bottom: map-get($mdc-layout-grid-default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+    padding-bottom: map-get($mdc-layout-grid-default-gutter, desktop);
+  }
+}
 
-// .full-padding {
-//   padding: $grid-gutter-width-base;
-// }
+.t2b-padding {
+  padding: map-get($mdc-layout-grid-default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+    padding: map-get($mdc-layout-grid-default-gutter, desktop);
+  }
+}
 
-// .full-padding-horizontal {
-//   padding-left: $grid-gutter-width-base;
-//   padding-right: $grid-gutter-width-base;
-// }
+.t2b-margin-horizontal {
+  margin-left: map-get($mdc-layout-grid-default-gutter, phone);
+  margin-right: map-get($mdc-layout-grid-default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+    margin-left: map-get($mdc-layout-grid-default-gutter, desktop);
+    margin-right: map-get($mdc-layout-grid-default-gutter, desktop);
+  }
+}
 
-// .full-padding-vertical {
-//   padding-top: $grid-gutter-width-base;
-//   padding-bottom: $grid-gutter-width-base;
-// }
+.t2b-margin-vertical {
+  margin-top: map-get($mdc-layout-grid-default-gutter, phone);
+  margin-bottom: map-get($mdc-layout-grid-default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+    margin-top: map-get($mdc-layout-grid-default-gutter, desktop);
+    margin-bottom: map-get($mdc-layout-grid-default-gutter, desktop);
+  }
+}
+
+.t2b-margin-top {
+  margin-top: map-get($mdc-layout-grid-default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+    margin-top: map-get($mdc-layout-grid-default-gutter, desktop);
+  }
+}
+
+.t2b-margin-bottom {
+  margin-bottom: map-get($mdc-layout-grid-default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+    margin-bottom: map-get($mdc-layout-grid-default-gutter, desktop);
+  }
+}
 
 // .padding-golden-ratio {
 //   padding: 50%/$golden-ratio 0;

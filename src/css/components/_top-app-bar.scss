@@ -44,3 +44,14 @@
     display: inline-block;
   }
 }
+
+.t2b-top-app-bar__action--item {
+  color: mdc-theme-prop-value(text-hint-on-background) !important;
+
+  &.active {
+    color: mdc-theme-prop-value(text-primary-on-background) !important;
+    border-bottom: 2px solid $mdc-theme-primary;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

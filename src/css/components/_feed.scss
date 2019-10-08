@@ -1,0 +1,7 @@
+.t2b-feed__elem {
+  border-bottom: 1px solid mdc-theme-prop-value(text-hint-on-background);
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}

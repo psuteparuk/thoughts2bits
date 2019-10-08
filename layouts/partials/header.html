@@ -1,27 +1,27 @@
-{{ $baseURL := .Site.BaseURL }}
-{{ $currentSection := .Section }}
-{{ $kind := .Kind }}
-{{ $title := .Title }}
-
 <header class="t2b-top-app-bar mdc-top-app-bar">
-  <div class="mdc-top-app-bar__row">
+  <div class="t2b-container mdc-top-app-bar__row">
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
       <button class="t2b-top-app-bar__navigation-icon material-icons mdc-top-app-bar__navigation-icon mdc-icon-button mdc-theme--on-surface">menu</button>
       <span class="t2b-top-app-bar__title mdc-top-app-bar__title">
-        <a class="t2b-top-app-bar__logo" href="{{ $baseURL }}"></a>
+        <a class="t2b-top-app-bar__logo" href="{{ .Site.BaseURL }}"></a>
       </span>
 
       <div class="t2b-top-app-bar__action-items">
-        {{ range $section, $page := .Site.Sections }}
-          {{ if ne $page "" }}
-            {{ $isActive := or (eq $page.Type $currentSection) (and (eq $kind "section") (lower $title | eq $page.Type)) }}
-            <a
-              class="mdc-button {{ if $isActive }}mdc-button--outlined{{ end }} mdc-theme--text-hint-on-light"
-              href="{{ $baseURL }}{{ $page.Type }}">
-              <span class="mdc-button__label">{{ $page.Type }}</span>
-            </a>
-          {{ end }}
-        {{ end }}
+        <a
+          class="t2b-top-app-bar__action--item mdc-button {{ if eq .Type "about" }}active{{ end }}"
+          href="{{ "about" | absURL }}">
+          <span class="mdc-button__label">about</span>
+        </a>
+        <a
+          class="t2b-top-app-bar__action--item mdc-button {{ if eq .Type "posts" }}active{{ end }}"
+          href="{{ "posts" | absURL }}">
+          <span class="mdc-button__label">blog</span>
+        </a>
+        <a
+          class="t2b-top-app-bar__action--item mdc-button {{ if eq .Type "podcasts" }}active{{ end }}"
+          href="{{ "podcasts" | absURL }}">
+          <span class="mdc-button__label">podcasts</span>
+        </a>
       </div>
     </section>
   </div>

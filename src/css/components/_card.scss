@@ -1,22 +1,26 @@
 .t2b-card {
-  border-radius: $border-radius-lg;
-  transition: all $mdc-animation-fast-out-slow-in-timing-function $duration-base;
+  border: none;
+  transition: mdc-animation-exit-permanent(all, $duration-base);
 
   &:hover {
     @include mdc-elevation(8);
+    transition: mdc-animation-enter-permanent(all, $duration-base);
   }
 }
 
-.t2b-card-primary {
-  border-top: $border-radius-lg solid $mdc-theme-primary;
+.t2b-card__primary {
+  padding: 16px;
 }
 
-.t2b-card-accent {
-  border-top: $border-radius-lg solid $mdc-theme-accent;
+.t2b-card__secondary {
+  padding: 0px 16px 8px;
 }
 
-.t2b-card-action {
-  &:first-child {
-    margin-left: auto;
-  }
+.t2b-card__title {
+  font-family: $font-family-headings;
+  margin: 0;
+}
+
+.t2b-card__subtitle {
+  margin: 0;
 }
