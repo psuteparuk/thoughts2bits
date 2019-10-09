@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://thoughts2bits.com/about/</loc>
+    <lastmod>2017-01-23T17:15:34+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://thoughts2bits.com/</loc>
+  </url>
+  
+  <url>
+    <loc>http://thoughts2bits.com/podcasts/</loc>
+  </url>
+  
+  <url>
+    <loc>http://thoughts2bits.com/posts/</loc>
+  </url>
+  
+  <url>
+    <loc>http://thoughts2bits.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://thoughts2bits.com/series/</loc>
+  </url>
+  
+  <url>
+    <loc>http://thoughts2bits.com/tags/</loc>
+  </url>
+  
+</urlset>
