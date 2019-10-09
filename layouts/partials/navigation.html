@@ -1,0 +1,14 @@
+<aside>
+  <div class="t2b-navigation">
+    {{ if .PrevInSection }}
+    <section class="t2b-navigation__section t2b-navigation__section--align-start">
+      <a class="mdc-button" href="{{ .PrevInSection.Permalink }}" rel="prev">&larr; Prev</a>
+    </section>
+    {{ end }}
+    {{ if .NextInSection }}
+    <section class="t2b-navigation__section t2b-navigation__section--align-end">
+      <a class="mdc-button" href="{{ .NextInSection.Permalink }}" rel="next">Next &rarr;</a>
+    </section>
+    {{ end }}
+  </div>
+</aside>

@@ -1,22 +1,47 @@
 {{ define "main" }}
-<div class="container full-padding-vertical">
-  <div class="t2b-display-title text-center">
-    <span>{{ .Title }}</span>
-  </div>
+{{ $baseURL := .Site.BaseURL }}
 
-  <article class="gutter-padding-vertical text-lg line-height-base">
+<div class="bg-gray-light t2b-padding">
+  <div class="t2b-container--narrow">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--align-middle mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12-desktop">
+          <div class="text-center">
+            <h4 class="t2b-cover--headline">
+              <span>{{ .Title }}</span>
+            </h4>
+            <p class="t2b-cover--subtitle">{{ .Date.Format "Jan 02, 2006" }}</p>
+            <p class="mdc-typography--caption text-italic">{{ .Params.author | default .Site.Params.author }}</p>
+            {{ with .Params.categories }}
+            <p class="t2b-category-set mdc-chip-set">
+              {{ range . }}
+              <a class="mdc-chip" href="{{ $baseURL }}categories/{{ urlize . }}">
+                <span class="mdc-chip__text">{{ . }}</span>
+              </a>
+              {{ end }}
+            </p>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="t2b-container--narrow t2b-padding-vertical">
+  <article class="mdc-typography--body1">
     {{ .Content }}
   </article>
 
-  <aside>
-    <div class="full-width gutter-padding clearfix">
-      {{ if .PrevInSection }}
-      <a class="text-lg pull-left" href="{{ .PrevInSection.Permalink }}" rel="prev">&larr; {{ .PrevInSection.Title }}</a>
-      {{ end }}
-      {{ if .NextInSection }}
-      <a class="text-lg pull-right" href="{{ .NextInSection.Permalink }}" rev="next">{{ .NextInSection.Title }} &rarr;</a>
+  {{ partial "navigation.html" . }}
+
+  <!-- <aside>
+    <div class="gutter-padding-vertical">
+      <h5>About The Author:</h5>
+      {{ with .Site.GetPage "section" "about" }}
+        {{ .Render "summary" }}
       {{ end }}
     </div>
-  </aside>
+  </aside> -->
 </div>
 {{ end }}

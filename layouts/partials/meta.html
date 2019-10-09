@@ -1,7 +1,7 @@
 <meta name="robots" content="all">
-<meta name="author" content="{{ default .Site.Params.author .Params.author }}">
+<meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
 <meta name="copyright" content="{{ .Site.Copyright }}">
-<meta name="description" content="{{ default .Site.Params.description .Description }}">
+<meta name="description" content="{{ .Description | default .Site.Params.description }}">
 {{ with .Keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
 
 {{ if .IsHome }}
@@ -14,8 +14,8 @@
 
 <meta property="og:site_name" content="Thoughts2Bits">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:image" content="{{ default .Site.Params.logo .Params.Image }}">
-<meta property="og:description" content="{{ default .Site.Params.description .Description }}">
+<meta property="og:image" content="{{ .Params.Image | default .Site.Params.logo }}">
+<meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

@@ -1,0 +1,22 @@
+.t2b-navigation {
+  display: flex;
+  width: 100%;
+}
+
+.t2b-navigation__section {
+  display: inline-flex;
+  flex: 1 1 auto;
+  align-items: center;
+  min-width: 0;
+  padding: 8px 12px;
+}
+
+.t2b-navigation__section--align-start {
+  justify-content: flex-start;
+  order: -1;
+}
+
+.t2b-navigation__section--align-end {
+  justify-content: flex-end;
+  order: 1;
+}
