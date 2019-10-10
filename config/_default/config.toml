@@ -1,14 +1,14 @@
 languageCode = "en-us"
 title = "Thoughts2Bits"
-baseURL = "http://thoughts2bits.com/"
+baseURL = "https://psuteparuk.github.io/thoughts2bits/"
 canonifyURLs = true
 copyright = "Copyright &copy; 2019 Thoughts2Bits"
-keywords = "Blog, Engineering, Thoughts, Bits, Thoughts2Bits"
+keywords = "Blog, Podcasts, Software, Engineering, Thoughts, Bits"
 buildDrafts = true
 
 [params]
   author = "Potcharapol Suteparuk"
-  description = "Thoughts 2 Bits Blog"
+  description = "Thoughts2Bits: Software engineering content"
 
 [taxonomies]
   category = "categories"

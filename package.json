@@ -27,7 +27,7 @@
     "js:prod": "browserify src/js/main.js -t [ babelify ] | uglifyjs -m -c > static/js/main.js",
 
     "//": " --- BUILD (COMMON) --- ",
-    "clean": "rimraf static/css static/images static/js public",
+    "clean": "rimraf static/css static/images static/js public/*",
     "mkdirs": "mkdir -p static/css && mkdir -p static/images && mkdir -p static/js",
     "copy": "npm run copy:images",
 
