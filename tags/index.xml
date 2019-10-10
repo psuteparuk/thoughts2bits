@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Thoughts2Bits</title>
-    <link>http://thoughts2bits.com/tags/</link>
+    <link>https://psuteparuk.github.io/thoughts2bits/tags/</link>
     <description>Recent content in Tags on Thoughts2Bits</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; 2019 Thoughts2Bits</copyright>
     
-	<atom:link href="http://thoughts2bits.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://psuteparuk.github.io/thoughts2bits/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
