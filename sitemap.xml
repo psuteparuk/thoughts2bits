@@ -3,32 +3,87 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://psuteparuk.github.io/thoughts2bits/</loc>
+    <lastmod>2017-01-31T14:35:59+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://psuteparuk.github.io/thoughts2bits/notes/</loc>
+    <lastmod>2017-01-31T14:35:59+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://psuteparuk.github.io/thoughts2bits/series/self-driving-car-nanodegree/</loc>
+    <lastmod>2017-01-31T14:35:59+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://psuteparuk.github.io/thoughts2bits/series/self-driving-car-nanodegree-term-1/</loc>
+    <lastmod>2017-01-31T14:35:59+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://psuteparuk.github.io/thoughts2bits/series/</loc>
+    <lastmod>2017-01-31T14:35:59+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://psuteparuk.github.io/thoughts2bits/notes/udacity-sdc/finding-lane-lines/</loc>
+    <lastmod>2017-01-31T14:35:59+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://psuteparuk.github.io/thoughts2bits/about/</loc>
     <lastmod>2017-01-23T17:15:34+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://psuteparuk.github.io/thoughts2bits/</loc>
-  </url>
-  
-  <url>
-    <loc>https://psuteparuk.github.io/thoughts2bits/podcasts/</loc>
-  </url>
-  
-  <url>
     <loc>https://psuteparuk.github.io/thoughts2bits/posts/</loc>
+    <lastmod>2017-01-23T15:41:24+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://psuteparuk.github.io/thoughts2bits/posts/next-post/</loc>
+    <lastmod>2017-01-23T15:41:24+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://psuteparuk.github.io/thoughts2bits/categories/</loc>
+    <lastmod>2017-01-22T04:09:59+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://psuteparuk.github.io/thoughts2bits/series/</loc>
+    <loc>https://psuteparuk.github.io/thoughts2bits/categories/development/</loc>
+    <lastmod>2017-01-22T04:09:59+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://psuteparuk.github.io/thoughts2bits/tags/development/</loc>
+    <lastmod>2017-01-22T04:09:59+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://psuteparuk.github.io/thoughts2bits/posts/good-to-great/</loc>
+    <lastmod>2017-01-22T04:09:59+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://psuteparuk.github.io/thoughts2bits/tags/review/</loc>
+    <lastmod>2017-01-22T04:09:59+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://psuteparuk.github.io/thoughts2bits/categories/review/</loc>
+    <lastmod>2017-01-22T04:09:59+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://psuteparuk.github.io/thoughts2bits/tags/</loc>
+    <lastmod>2017-01-22T04:09:59+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://psuteparuk.github.io/thoughts2bits/podcasts/</loc>
   </url>
   
 </urlset>

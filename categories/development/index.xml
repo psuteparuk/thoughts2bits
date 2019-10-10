@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Thoughts2Bits</title>
-    <link>https://psuteparuk.github.io/thoughts2bits/posts/</link>
-    <description>Recent content on Thoughts2Bits</description>
+    <title>Development on Thoughts2Bits</title>
+    <link>https://psuteparuk.github.io/thoughts2bits/categories/development/</link>
+    <description>Recent content in Development on Thoughts2Bits</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; 2019 Thoughts2Bits</copyright>
-    <lastBuildDate>Mon, 23 Jan 2017 15:41:24 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 22 Jan 2017 04:09:59 +0700</lastBuildDate>
     
-	<atom:link href="https://psuteparuk.github.io/thoughts2bits/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://psuteparuk.github.io/thoughts2bits/categories/development/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Next Post</title>
-      <link>https://psuteparuk.github.io/thoughts2bits/posts/next-post/</link>
-      <pubDate>Mon, 23 Jan 2017 15:41:24 +0700</pubDate>
-      
-      <guid>https://psuteparuk.github.io/thoughts2bits/posts/next-post/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores laborum in fugiat unde nulla quos officia necessitatibus animi quasi nemo harum, consectetur repellendus! Amet, ea. Reiciendis quas sequi quo possimus.</description>
-    </item>
     
     <item>
       <title>Good to Great</title>

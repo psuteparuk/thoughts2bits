@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Thoughts2Bits</title>
-    <link>https://psuteparuk.github.io/thoughts2bits/</link>
-    <description>Recent content on Thoughts2Bits</description>
+    <title>Self-Driving Car Nanodegree on Thoughts2Bits</title>
+    <link>https://psuteparuk.github.io/thoughts2bits/series/self-driving-car-nanodegree/</link>
+    <description>Recent content in Self-Driving Car Nanodegree on Thoughts2Bits</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; 2019 Thoughts2Bits</copyright>
     <lastBuildDate>Tue, 31 Jan 2017 14:35:59 +0700</lastBuildDate>
     
-	<atom:link href="https://psuteparuk.github.io/thoughts2bits/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://psuteparuk.github.io/thoughts2bits/series/self-driving-car-nanodegree/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,24 +19,6 @@
       
       <guid>https://psuteparuk.github.io/thoughts2bits/notes/udacity-sdc/finding-lane-lines/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus amet quisquam deserunt quasi blanditiis deleniti mollitia, iure ratione esse qui ullam aut vitae eos minima ipsa dolorum sunt. Saepe, rerum? Tenetur beatae mollitia cupiditate doloremque architecto provident impedit at eligendi, ullam magni, alias velit, corporis consequuntur veniam. Nulla ad at dignissimos, numquam, alias, dolore quod distinctio sunt aliquid eos repellendus! Nisi nesciunt ex error, aut fuga dolores quidem asperiores dolor ea cumque dignissimos corrupti aspernatur consequuntur enim, temporibus velit voluptatem laudantium sit adipisci ut tempora minus commodi!</description>
-    </item>
-    
-    <item>
-      <title>Next Post</title>
-      <link>https://psuteparuk.github.io/thoughts2bits/posts/next-post/</link>
-      <pubDate>Mon, 23 Jan 2017 15:41:24 +0700</pubDate>
-      
-      <guid>https://psuteparuk.github.io/thoughts2bits/posts/next-post/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores laborum in fugiat unde nulla quos officia necessitatibus animi quasi nemo harum, consectetur repellendus! Amet, ea. Reiciendis quas sequi quo possimus.</description>
-    </item>
-    
-    <item>
-      <title>Good to Great</title>
-      <link>https://psuteparuk.github.io/thoughts2bits/posts/good-to-great/</link>
-      <pubDate>Sun, 22 Jan 2017 04:09:59 +0700</pubDate>
-      
-      <guid>https://psuteparuk.github.io/thoughts2bits/posts/good-to-great/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quas, quisquam porro possimus alias reprehenderit at quae est cupiditate esse tenetur consectetur deleniti dolores eligendi non suscipit quibusdam itaque distinctio.&lt;/p&gt;</description>
     </item>
     
   </channel>
