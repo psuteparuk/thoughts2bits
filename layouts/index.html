@@ -1,21 +1,21 @@
 {{ define "main" }}
 {{ $baseURL := .Site.BaseURL }}
 
-<div class="bg-gray-light t2b-padding">
+<div class="bg-image t2b-padding mdc-theme--on-primary">
   <div class="t2b-container">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner">
-        <div class="t2b-cover--text mdc-layout-grid__cell mdc-layout-grid__cell--align-middle mdc-layout-grid__cell--span-5-desktop">
+        <div class="t2b-cover--image mdc-layout-grid__cell mdc-layout-grid__cell--align-middle mdc-layout-grid__cell--span-6-desktop">
+          <picture>
+            <img class="t2b-cover--image full-width" src="{{ $baseURL }}images/logo-circular.png" alt="Cover" title="Cover" />
+          </picture>
+        </div>
+        <div class="t2b-cover--text mdc-layout-grid__cell mdc-layout-grid__cell--align-middle mdc-layout-grid__cell--span-6-desktop">
           <h4 class="t2b-cover--headline">{{ .Params.coverHeadline }}</h4>
           <p class="t2b-cover--subtitle">{{ .Params.coverSubtitle }}</p>
-          <a class="mdc-button mdc-button--raised" href="#">
-            <span class="mdc-button__label">Contact Us</span>
+          <a class="t2b-cover--cta mdc-button mdc-button--raised" href="#">
+            <span class="mdc-button__label">Explore Our Contents</span>
           </a>
-        </div>
-        <div class="t2b-cover--image mdc-layout-grid__cell mdc-layout-grid__cell--align-middle mdc-layout-grid__cell--span-7-desktop">
-          <picture>
-            <img class="t2b-cover--image full-width" src="{{ $baseURL }}images/cover-transparent.png" alt="Cover" title="Cover" />
-          </picture>
         </div>
       </div>
     </div>

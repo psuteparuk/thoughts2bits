@@ -1,11 +1,15 @@
 .t2b-top-app-bar {
-  @include mdc-top-app-bar-fill-color($gray-light);
-  @include mdc-top-app-bar-icon-ink-color(on-surface);
-  @include mdc-top-app-bar-ink-color(on-surface);
+  @include mdc-top-app-bar-fill-color($mdc-theme-primary);
+  @include mdc-top-app-bar-icon-ink-color(on-primary);
+  @include mdc-top-app-bar-ink-color(on-primary);
   // @include mdc-elevation(4);
 }
 
 .t2b-top-app-bar__title {
+  @include mdc-typography(headline5);
+  font-family: $font-family-headings;
+  font-weight: map-get($mdc-typography-font-weight-values, medium);
+  letter-spacing: 0.1em;
   padding-left: $mdc-top-app-bar-title-left-padding/2;
 
   @media screen and (min-width: mdc-layout-grid-breakpoint-min(tablet)) {
@@ -17,7 +21,7 @@
   display: inline-block;
   height: $mdc-top-app-bar-row-height*0.4;
   width: $mdc-top-app-bar-row-height*4;
-  background: url("../images/logo-filled-transparent.png") no-repeat;
+  background: url("../images/logo-circular.png") no-repeat;
   background-size: auto 100%;
   vertical-align: middle;
 
@@ -31,6 +35,8 @@
 }
 
 .t2b-top-app-bar__navigation-icon {
+  @include mdc-theme-prop(color, text-primary-on-dark);
+
   @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
     display: none;
   }
@@ -46,11 +52,12 @@
 }
 
 .t2b-top-app-bar__action--item {
-  color: mdc-theme-prop-value(text-hint-on-background) !important;
+  @include mdc-button-filled-accessible($mdc-theme-primary);
+  color: mdc-theme-prop-value(text-hint-on-dark) !important;
 
   &.active {
-    color: mdc-theme-prop-value(text-primary-on-background) !important;
-    border-bottom: 2px solid $mdc-theme-primary;
+    color: mdc-theme-prop-value(text-primary-on-dark) !important;
+    border-bottom: 2px solid mdc-theme-prop-value(text-primary-on-dark);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }

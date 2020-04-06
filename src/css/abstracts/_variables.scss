@@ -6,7 +6,8 @@ $mdc-typography-font-family: $font-family-base;
 $mdc-typography-font-weight-values: (
   light: 300,
   regular: 400,
-  medium: 600
+  medium: 600,
+  bold: 700
 );
 
 $mdc-typography-styles-headline1: (
@@ -62,8 +63,8 @@ $gray-light: #FAFAFA;
 
 // $link-hover-color: $brand-primary-dark;
 
-$mdc-theme-primary: #DA3B01;
-$mdc-theme-secondary: #0277BD;
+$mdc-theme-primary: #21404B;
+$mdc-theme-secondary: #CC4239;
 $mdc-theme-background: #FFFFFF;
 
 $duration-base: .2s;

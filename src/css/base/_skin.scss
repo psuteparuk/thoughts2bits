@@ -2,6 +2,12 @@
   background: none;
 }
 
+.bg-image {
+  background: url("../images/cover.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .bg-gray-dark {
   background-color: $gray-dark;
 }

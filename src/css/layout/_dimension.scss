@@ -37,10 +37,10 @@
   }
 }
 
-.t2b-padding {
-  padding: map-get($mdc-layout-grid-default-gutter, phone);
+.t2b-margin {
+  margin: map-get($mdc-layout-grid-default-gutter, phone);
   @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    padding: map-get($mdc-layout-grid-default-gutter, desktop);
+    margin: map-get($mdc-layout-grid-default-gutter, desktop);
   }
 }
 
