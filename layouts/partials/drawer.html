@@ -4,25 +4,33 @@
       <a
         class="mdc-list-item {{ if .IsHome }}mdc-list-item--activated{{ end }}"
         href="{{ .Site.BaseURL }}"
+        {{ if .IsHome }}tabindex="0"{{ end }}
         aria-current="page">
+        <span class="mdc-list-item__ripple"></span>
         <span class="mdc-list-item__text">HOME</span>
       </a>
       <a
         class="mdc-list-item {{ if eq .Type "about" }}mdc-list-item--activated{{ end }}"
         href="{{ "about" | absURL }}"
+        {{ if eq .Type "about" }}tabindex="0"{{ end }}
         aria-current="page">
+        <span class="mdc-list-item__ripple"></span>
         <span class="mdc-list-item__text">ABOUT</span>
       </a>
       <a
         class="mdc-list-item {{ if eq .Type "posts" }}mdc-list-item--activated{{ end }}"
         href="{{ "posts" | absURL }}"
+        {{ if eq .Type "posts" }}tabindex="0"{{ end }}
         aria-current="page">
+        <span class="mdc-list-item__ripple"></span>
         <span class="mdc-list-item__text">BLOG</span>
       </a>
       <a
         class="mdc-list-item {{ if eq .Type "podcasts" }}mdc-list-item--activated{{ end }}"
         href="{{ "podcasts" | absURL }}"
+        {{ if eq .Type "podcasts" }}tabindex="0"{{ end }}
         aria-current="page">
+        <span class="mdc-list-item__ripple"></span>
         <span class="mdc-list-item__text">PODCASTS</span>
       </a>
     </nav>

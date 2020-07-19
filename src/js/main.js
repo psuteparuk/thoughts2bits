@@ -1,20 +1,17 @@
-import { MDCDrawer } from "@material/drawer";
-import { MDCTopAppBar } from "@material/top-app-bar";
-import { BehaviorSubject, fromEvent } from "rxjs";
-import { filter } from "rxjs/operators";
+import { MDCRipple } from "@material/ripple";
+import { TopAppBar } from "./top-app-bar";
+import { MainDrawer } from "./main-drawer";
+import { fromEvent } from "rxjs";
 
-const mainContentEl = document.querySelector(".t2b-main-content")
-const topAppBar = MDCTopAppBar.attachTo(document.querySelector(".t2b-top-app-bar"));
-const mainDrawer = MDCDrawer.attachTo(document.querySelector(".t2b-main-drawer"));
-const mainDrawerListEl = document.querySelector(".t2b-main-drawer .mdc-list")
+fromEvent(document, "DOMContentLoaded").subscribe(_ => {
+  const mainContentEl = document.querySelector(".t2b-main-content");
+  const topAppBar = new TopAppBar(".t2b-top-app-bar");
+  const mainDrawer = new MainDrawer(".t2b-main-drawer");
 
-const navEvent$ = new BehaviorSubject(null);
-topAppBar.listen("MDCTopAppBar:nav", _ => navEvent$.next(true));
+  topAppBar.handleNavEvent();
+  mainDrawer.handleNavEvent(topAppBar.navEvent$, mainContentEl);
+  mainDrawer.initRipple();
 
-navEvent$
-  .pipe(filter(ev => ev != null))
-  .subscribe(_ => mainDrawer.open = !mainDrawer.open);
-fromEvent(mainDrawerListEl, "click")
-  .subscribe(_ => mainDrawer.open = false);
-fromEvent(document.body, "MDCDrawer:closed")
-  .subscribe(_ => mainContentEl.querySelector("input, button").focus());
+  // Attach ripple to all buttons
+  document.querySelectorAll(".mdc-button").forEach(MDCRipple.attachTo);
+});

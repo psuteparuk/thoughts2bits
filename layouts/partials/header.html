@@ -10,16 +10,19 @@
         <a
           class="t2b-top-app-bar__action--item mdc-button {{ if eq .Type "about" }}active{{ end }}"
           href="{{ "about" | absURL }}">
+          <div class="mdc-button__ripple"></div>
           <span class="mdc-button__label">about</span>
         </a>
         <a
           class="t2b-top-app-bar__action--item mdc-button {{ if eq .Type "posts" }}active{{ end }}"
           href="{{ "posts" | absURL }}">
+          <div class="mdc-button__ripple"></div>
           <span class="mdc-button__label">blog</span>
         </a>
         <a
           class="t2b-top-app-bar__action--item mdc-button {{ if eq .Type "podcasts" }}active{{ end }}"
           href="{{ "podcasts" | absURL }}">
+          <div class="mdc-button__ripple"></div>
           <span class="mdc-button__label">podcasts</span>
         </a>
       </div>
