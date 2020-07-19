@@ -1,10 +1,14 @@
+@use '@material/animation/functions' as mdc-animation-functions;
+@use '@material/elevation/mixins' as mdc-elevation-mixins;
+@use '../abstracts/variables';
+
 .t2b-card {
   border: none;
-  transition: mdc-animation-exit-permanent(all, $duration-base);
+  transition: mdc-animation-functions.exit-permanent(all, variables.$duration-base);
 
   &:hover {
-    @include mdc-elevation(8);
-    transition: mdc-animation-enter-permanent(all, $duration-base);
+    @include mdc-elevation-mixins.elevation(8);
+    transition: mdc-animation-enter-permanent(all, variables.$duration-base);
   }
 }
 
@@ -17,7 +21,7 @@
 }
 
 .t2b-card__title {
-  font-family: $font-family-headings;
+  font-family: variables.$font-family-headings;
   margin: 0;
 }
 

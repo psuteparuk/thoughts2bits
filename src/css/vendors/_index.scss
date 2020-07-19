@@ -1,15 +1,47 @@
+@use '../abstracts/variables';
+
 // normalize
-@import 'normalize.css/normalize';
+
+@use 'normalize.css/normalize';
 
 // material components
-@import '@material/button/mdc-button';
-@import '@material/card/mdc-card';
-@import '@material/chips/mdc-chips';
-@import '@material/drawer/mdc-drawer';
-@import '@material/elevation/mdc-elevation';
-@import '@material/icon-button/mdc-icon-button';
-@import '@material/layout-grid/mdc-layout-grid';
-@import '@material/list/mdc-list';
-@import '@material/theme/mdc-theme';
-@import '@material/top-app-bar/mdc-top-app-bar';
-@import '@material/typography/mdc-typography';
+
+@use '@material/theme' as mdc-theme with (
+  $primary: variables.$primary-color,
+  $secondary: variables.$secondary-color,
+  $background: variables.$background-color
+);
+@use '@material/typography' as mdc-typography with (
+  $font-family: variables.$font-family-base,
+  $font-weight-values: variables.$font-weight-values,
+  $styles-headline1: (
+    font-family: variables.$font-family-headings
+  ),
+  $styles-headline2: (
+    font-family: variables.$font-family-headings
+  ),
+  $styles-headline3: (
+    font-family: variables.$font-family-headings
+  ),
+  $styles-headline4: (
+    font-family: variables.$font-family-headings
+  )
+);
+@use '@material/button' as mdc-button;
+@use '@material/card' as mdc-card;
+@use '@material/chips/mdc-chips';
+@use '@material/drawer' as mdc-drawer;
+@use '@material/elevation/mdc-elevation';
+@use '@material/icon-button' as mdc-icon-button;
+@use '@material/layout-grid/mdc-layout-grid';
+@use '@material/list' as mdc-list;
+@use '@material/top-app-bar/mdc-top-app-bar';
+
+@include mdc-button.core-styles;
+@include mdc-card.core-styles;
+@include mdc-drawer.core-styles;
+@include mdc-drawer.modal-core-styles;
+@include mdc-icon-button.core-styles;
+@include mdc-list.core-styles;
+@include mdc-theme.core-styles;
+@include mdc-typography.core-styles;

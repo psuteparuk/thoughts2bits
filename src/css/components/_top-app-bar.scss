@@ -1,63 +1,75 @@
+@use 'sass:map';
+@use '@material/button/mixins' as mdc-button-mixins;
+@use '@material/layout-grid/mixins' as mdc-layout-grid-mixins;
+@use '@material/layout-grid/variables' as mdc-layout-grid-variables;
+@use '@material/theme/mixins' as mdc-theme-mixins;
+@use '@material/theme/variables' as mdc-theme-variables;
+@use '@material/top-app-bar/mixins' as mdc-top-app-bar-mixins;
+@use '@material/top-app-bar/variables' as mdc-top-app-bar-variables;
+@use '@material/typography/mixins' as mdc-typography-mixins;
+@use '@material/typography/variables' as mdc-typography-variables;
+@use '../abstracts/variables';
+
 .t2b-top-app-bar {
-  @include mdc-top-app-bar-fill-color($mdc-theme-primary);
-  @include mdc-top-app-bar-icon-ink-color(on-primary);
-  @include mdc-top-app-bar-ink-color(on-primary);
+  @include mdc-top-app-bar-mixins.fill-color(mdc-theme-variables.$primary);
+  @include mdc-top-app-bar-mixins.icon-ink-color(on-primary);
+  @include mdc-top-app-bar-mixins.ink-color(on-primary);
   // @include mdc-elevation(4);
 }
 
 .t2b-top-app-bar__title {
-  @include mdc-typography(headline5);
-  font-family: $font-family-headings;
-  font-weight: map-get($mdc-typography-font-weight-values, medium);
+  @include mdc-typography-mixins.typography(headline5);
+  font-family: variables.$font-family-headings;
+  font-weight: map.get(variables.$font-weight-values, medium);
   letter-spacing: 0.1em;
-  padding-left: $mdc-top-app-bar-title-left-padding/2;
+  padding-left: mdc-top-app-bar-variables.$title-left-padding/2;
 
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(tablet)) {
-    padding-left: $mdc-top-app-bar-title-left-padding;
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(tablet)) {
+    padding-left: mdc-top-app-bar-variables.$title-left-padding;
   }
 }
 
 .t2b-top-app-bar__logo {
   display: inline-block;
-  height: $mdc-top-app-bar-row-height*0.4;
-  width: $mdc-top-app-bar-row-height*4;
-  background: url("../images/logo-circular.png") no-repeat;
+  height: mdc-top-app-bar-variables.$row-height*0.4;
+  width: mdc-top-app-bar-variables.$row-height*4;
+  background: url('../images/logo-circular.png') no-repeat;
   background-size: auto 100%;
   vertical-align: middle;
 
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(tablet)) {
-    height: $mdc-top-app-bar-row-height/2;
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(tablet)) {
+    height: mdc-top-app-bar-variables.$row-height/2;
   }
 
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
     margin-bottom: 5px;
   }
 }
 
 .t2b-top-app-bar__navigation-icon {
-  @include mdc-theme-prop(color, text-primary-on-dark);
+  @include mdc-theme-mixins.property(color, text-primary-on-dark);
 
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
     display: none;
   }
 }
 
 .t2b-top-app-bar__action-items {
   display: none;
-  margin-left: map-get($mdc-layout-grid-default-margin, "desktop");
+  margin-left: map.get(mdc-layout-grid-variables.$default-margin, desktop);
 
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
     display: inline-block;
   }
 }
 
 .t2b-top-app-bar__action--item {
-  @include mdc-button-filled-accessible($mdc-theme-primary);
-  color: mdc-theme-prop-value(text-hint-on-dark) !important;
+  @include mdc-theme-mixins.property(color, text-hint-on-dark, (), true);
+  @include mdc-button-mixins.filled-accessible(mdc-theme-variables.$primary);
 
   &.active {
-    color: mdc-theme-prop-value(text-primary-on-dark) !important;
-    border-bottom: 2px solid mdc-theme-prop-value(text-primary-on-dark);
+    @include mdc-theme-mixins.property(color, text-primary-on-dark, (), true);
+    border-bottom: 2px solid map.get(mdc-theme-variables.$property-values, text-primary-on-dark);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }

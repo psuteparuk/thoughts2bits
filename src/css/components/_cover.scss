@@ -1,41 +1,50 @@
+@use 'sass:map';
+@use '@material/button/mixins' as mdc-button-mixins;
+@use '@material/layout-grid/mixins' as mdc-layout-grid-mixins;
+@use '@material/layout-grid/variables' as mdc-layout-grid-variables;
+@use '@material/theme/variables' as mdc-theme-variables;
+@use '@material/typography/mixins' as mdc-typography-mixins;
+@use '@material/typography/variables' as mdc-typography-variables;
+@use '../abstracts/variables';
+
 .t2b-cover--text {
   text-align: center;
 
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(tablet)) {
-    @include mdc-layout-grid-cell-order(1);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(tablet)) {
+    @include mdc-layout-grid-mixins.cell-order(1);
     text-align: left;
   }
 }
 
 .t2b-cover--headline {
-  @include mdc-typography(headline4);
-  font-weight: map-get($mdc-typography-font-weight-values, medium);
+  @include mdc-typography-mixins.typography(headline4);
+  font-weight: map.get(variables.$font-weight-values, medium);
 
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    @include mdc-typography(headline3);
-    font-weight: map-get($mdc-typography-font-weight-values, medium);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
+    @include mdc-typography-mixins.typography(headline3);
+    font-weight: map.get(variables.$font-weight-values, medium);
   }
 }
 
 .t2b-cover--subtitle {
-  @include mdc-typography(headline6);
-  font-weight: map-get($mdc-typography-font-weight-values, regular);
+  @include mdc-typography-mixins.typography(headline6);
+  font-weight: map.get(variables.$font-weight-values, regular);
 
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    @include mdc-typography(headline5);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
+    @include mdc-typography-mixins.typography(headline5);
   }
 }
 
 .t2b-cover--cta {
-  @include mdc-button-filled-accessible($mdc-theme-secondary);
+  @include mdc-button-mixins.filled-accessible(variables.$secondary-color);
 }
 
 .t2b-cover--image {
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(tablet)) {
-    @include mdc-layout-grid-cell-order(2);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(tablet)) {
+    @include mdc-layout-grid-mixins.cell-order(2);
   }
 
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    padding: map-get($mdc-layout-grid-default-gutter, desktop);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
+    padding: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
   }
 }

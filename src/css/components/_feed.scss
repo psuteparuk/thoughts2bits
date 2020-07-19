@@ -1,5 +1,8 @@
+@use 'sass:map';
+@use '@material/theme/variables' as mdc-theme-variables;
+
 .t2b-feed__elem {
-  border-bottom: 1px solid mdc-theme-prop-value(text-hint-on-background);
+  border-bottom: 1px solid map.get(mdc-theme-variables.$property-values, text-hint-on-background);
 
   &:last-of-type {
     border-bottom: none;

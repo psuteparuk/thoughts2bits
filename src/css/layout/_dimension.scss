@@ -1,83 +1,87 @@
+@use 'sass:map';
+@use '@material/layout-grid/mixins' as mdc-layout-grid-mixins;
+@use '@material/layout-grid/variables' as mdc-layout-grid-variables;
+
 .t2b-padding {
-  padding: map-get($mdc-layout-grid-default-gutter, phone);
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    padding: map-get($mdc-layout-grid-default-gutter, desktop);
+  padding: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
+    padding: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
   }
 }
 
 .t2b-padding-horizontal {
-  padding-left: map-get($mdc-layout-grid-default-gutter, phone);
-  padding-right: map-get($mdc-layout-grid-default-gutter, phone);
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    padding-left: map-get($mdc-layout-grid-default-gutter, desktop);
-    padding-right: map-get($mdc-layout-grid-default-gutter, desktop);
+  padding-left: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  padding-right: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
+    padding-left: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
+    padding-right: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
   }
 }
 
 .t2b-padding-vertical {
-  padding-top: map-get($mdc-layout-grid-default-gutter, phone);
-  padding-bottom: map-get($mdc-layout-grid-default-gutter, phone);
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    padding-top: map-get($mdc-layout-grid-default-gutter, desktop);
-    padding-bottom: map-get($mdc-layout-grid-default-gutter, desktop);
+  padding-top: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  padding-bottom: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
+    padding-top: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
+    padding-bottom: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
   }
 }
 
 .t2b-padding-top {
-  padding-top: map-get($mdc-layout-grid-default-gutter, phone);
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    padding-top: map-get($mdc-layout-grid-default-gutter, desktop);
+  padding-top: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
+    padding-top: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
   }
 }
 
 .t2b-padding-bottom {
-  padding-bottom: map-get($mdc-layout-grid-default-gutter, phone);
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    padding-bottom: map-get($mdc-layout-grid-default-gutter, desktop);
+  padding-bottom: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
+    padding-bottom: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
   }
 }
 
 .t2b-margin {
-  margin: map-get($mdc-layout-grid-default-gutter, phone);
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    margin: map-get($mdc-layout-grid-default-gutter, desktop);
+  margin: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
+    margin: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
   }
 }
 
 .t2b-margin-horizontal {
-  margin-left: map-get($mdc-layout-grid-default-gutter, phone);
-  margin-right: map-get($mdc-layout-grid-default-gutter, phone);
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    margin-left: map-get($mdc-layout-grid-default-gutter, desktop);
-    margin-right: map-get($mdc-layout-grid-default-gutter, desktop);
+  margin-left: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  margin-right: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
+    margin-left: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
+    margin-right: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
   }
 }
 
 .t2b-margin-vertical {
-  margin-top: map-get($mdc-layout-grid-default-gutter, phone);
-  margin-bottom: map-get($mdc-layout-grid-default-gutter, phone);
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    margin-top: map-get($mdc-layout-grid-default-gutter, desktop);
-    margin-bottom: map-get($mdc-layout-grid-default-gutter, desktop);
+  margin-top: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  margin-bottom: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
+    margin-top: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
+    margin-bottom: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
   }
 }
 
 .t2b-margin-top {
-  margin-top: map-get($mdc-layout-grid-default-gutter, phone);
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    margin-top: map-get($mdc-layout-grid-default-gutter, desktop);
+  margin-top: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
+    margin-top: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
   }
 }
 
 .t2b-margin-bottom {
-  margin-bottom: map-get($mdc-layout-grid-default-gutter, phone);
-  @media screen and (min-width: mdc-layout-grid-breakpoint-min(desktop)) {
-    margin-bottom: map-get($mdc-layout-grid-default-gutter, desktop);
+  margin-bottom: map.get(mdc-layout-grid-variables.$default-gutter, phone);
+  @media screen and (min-width: mdc-layout-grid-mixins.breakpoint-min(desktop)) {
+    margin-bottom: map.get(mdc-layout-grid-variables.$default-gutter, desktop);
   }
 }
 
 // .padding-golden-ratio {
-//   padding: 50%/$golden-ratio 0;
+//   padding: 50%/variables.$golden-ratio 0;
 // }
 
 // .padding-none {

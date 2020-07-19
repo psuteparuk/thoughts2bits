@@ -1,6 +1,6 @@
-@import 'card';
-@import 'category-set';
-@import 'cover';
-@import 'feed';
-@import 'navigation';
-@import 'top-app-bar';
+@forward 'card';
+@forward 'category-set';
+@forward 'cover';
+@forward 'feed';
+@forward 'navigation';
+@forward 'top-app-bar';

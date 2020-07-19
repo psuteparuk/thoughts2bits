@@ -1,71 +1,20 @@
 $font-family-base: "Open Sans", Arial, sans-serif;
 $font-family-headings: Montserrat, Arial, sans-serif;
 
-$mdc-typography-font-family: $font-family-base;
-
-$mdc-typography-font-weight-values: (
+$font-weight-values: (
   light: 300,
   regular: 400,
   medium: 600,
   bold: 700
 );
 
-$mdc-typography-styles-headline1: (
-  font-family: $font-family-headings
-);
-
-$mdc-typography-styles-headline2: (
-  font-family: $font-family-headings
-);
-
-$mdc-typography-styles-headline3: (
-  font-family: $font-family-headings
-);
-
-$mdc-typography-styles-headline4: (
-  font-family: $font-family-headings
-);
-
-// colors
-// $color-persian-red: #D32F2F;
-// $color-pomegranate: #F44336;
-// $color-pastel-pink: #FFCDD2;
-// $color-orange-peel: #FF9800;
-// $color-mine-shaft: #212121;
-// $color-boulder: #757575;
-// $color-silver: #BDBDBD;
-// $color-gallery: #EEEEEE;
-// $color-alabaster: #FAFAFA;
-
-// $color-seance-dark: #7B1FA2;
-// $color-seance: #9C27B0;
-// $color-french-lilac: #E1BEE7;
-// $color-gold-drop: #F57C00;
-// $color-orange-peel: #FF9800;
-// $color-frangipani: #FFE0B2;
-// $color-cerulean: #03A9F4;
-// $color-fruit-salad: #4CAF50;
-// $color-sunshade: #FFA726;
-
-$color-congo-brown: #523634;
-$color-well-read: #B6452C;
-
-// $brand-primary: $color-pomegranate;
-// $brand-accent: $color-orange-peel;
-// $body-bg: $color-alabaster;
-
-// $brand-primary-dark: $color-persian-red;
-// $brand-primary-light: $color-pastel-pink;
+$primary-color: #21404B;
+$secondary-color: #CC4239;
+$background-color: #FFFFFF;
 
 $gray-dark: #212121;
 $gray: #757575;
 $gray-light: #FAFAFA;
-
-// $link-hover-color: $brand-primary-dark;
-
-$mdc-theme-primary: #21404B;
-$mdc-theme-secondary: #CC4239;
-$mdc-theme-background: #FFFFFF;
 
 $duration-base: .2s;
 $duration-fast: .15s;

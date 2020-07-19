@@ -1,3 +1,5 @@
+@use '../abstracts/variables';
+
 .background-none {
   background: none;
 }
@@ -9,15 +11,15 @@
 }
 
 .bg-gray-dark {
-  background-color: $gray-dark;
+  background-color: variables.$gray-dark;
 }
 
 .bg-gray {
-  background-color: $gray;
+  background-color: variables.$gray;
 }
 
 .bg-gray-light {
-  background-color: $gray-light;
+  background-color: variables.$gray-light;
 }
 
 .border-none {
@@ -27,10 +29,6 @@
 .text-italic {
   font-style: italic;
 }
-
-// .border-primary-bold {
-//   border: 2px solid $mdc-theme-primary;
-// }
 
 // .line-height-base {
 //   line-height: $line-height-base;
@@ -69,5 +67,5 @@
 // }
 
 // .divider-horizontal + .divider-horizontal {
-//   border-top: 1px solid $gray-light;
+//   border-top: 1px solid variables.$gray-light;
 // }
